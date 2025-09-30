@@ -10545,7 +10545,7 @@
         },
         "properties" : {
           "Regular Expression" : "(?s)(^.*$)",
-          "Replacement Value" : "{\n  \"clientId\": \"${ClientId}\",\n  \"billingNo\": \"${MatterBillingNo}\",\n  \"matterStatusId\": \"${MatterStatusId}\",\n  \"name\": \"${MatterName:escapeJson()}\",\n  \"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:prepend('\"'):append('\"')})},\n  \"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n  \"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n   \"PracticeId\" : \"${PracticeId}\"\n}",
+          "Replacement Value" : "{\n  \"clientId\": \"${ClientId}\",\n  \"billingNo\": \"${MatterBillingNo}\",\n  \"matterStatusId\": \"${MatterStatusId}\",\n  \"name\": \"${MatterName:escapeJson()}\",\n  \"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n  \"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n  \"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n   \"PracticeId\" : \"${PracticeId}\"\n}",
           "Evaluation Mode" : "Entire text",
           "Line-by-Line Evaluation Mode" : "All",
           "Character Set" : "UTF-8",
