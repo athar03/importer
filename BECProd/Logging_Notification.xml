@@ -1,0 +1,1171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.3">
+    <description></description>
+    <groupId>d46e9589-0185-1000-638f-3521930629f8</groupId>
+    <name>Logging_Notification</name>
+    <snippet>
+        <connections>
+            <id>0680efc9-d057-3dc4-0000-000000000000</id>
+            <parentGroupId>15419b28-75b1-38ba-0000-000000000000</parentGroupId>
+            <versionedComponentId>0680efc9-d057-3dc4-8c8d-0d8b15da4f05</versionedComponentId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>045af1ab-d9a6-37e2-0000-000000000000</groupId>
+                <id>ed48be01-b9d7-361e-0000-000000000000</id>
+                <type>INPUT_PORT</type>
+                <versionedComponentId>ed48be01-b9d7-361e-a354-46562a6a57d4</versionedComponentId>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <source>
+                <groupId>34f0cb82-88c7-3c46-0000-000000000000</groupId>
+                <id>2d040197-a1ec-38c5-0000-000000000000</id>
+                <type>OUTPUT_PORT</type>
+                <versionedComponentId>2d040197-a1ec-38c5-86be-aa248a07c214</versionedComponentId>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>81f6ae87-03e0-36c3-0000-000000000000</id>
+            <parentGroupId>15419b28-75b1-38ba-0000-000000000000</parentGroupId>
+            <versionedComponentId>81f6ae87-03e0-36c3-b561-f124436dac6a</versionedComponentId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>045af1ab-d9a6-37e2-0000-000000000000</groupId>
+                <id>ed48be01-b9d7-361e-0000-000000000000</id>
+                <type>INPUT_PORT</type>
+                <versionedComponentId>ed48be01-b9d7-361e-a354-46562a6a57d4</versionedComponentId>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <source>
+                <groupId>15419b28-75b1-38ba-0000-000000000000</groupId>
+                <id>5b6b7f27-3df2-353e-0000-000000000000</id>
+                <type>INPUT_PORT</type>
+                <versionedComponentId>5b6b7f27-3df2-353e-916c-3d5b9e174e7a</versionedComponentId>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>ffb9bff7-050d-3c60-0000-000000000000</id>
+            <parentGroupId>15419b28-75b1-38ba-0000-000000000000</parentGroupId>
+            <versionedComponentId>ffb9bff7-050d-3c60-a219-dc3121201bc7</versionedComponentId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>34f0cb82-88c7-3c46-0000-000000000000</groupId>
+                <id>964e78c5-aad0-3001-0000-000000000000</id>
+                <type>INPUT_PORT</type>
+                <versionedComponentId>964e78c5-aad0-3001-b2aa-7cdfc470ad19</versionedComponentId>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <source>
+                <groupId>15419b28-75b1-38ba-0000-000000000000</groupId>
+                <id>65303017-1315-3f95-0000-000000000000</id>
+                <type>INPUT_PORT</type>
+                <versionedComponentId>65303017-1315-3f95-8687-3cb9d403975d</versionedComponentId>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <inputPorts>
+            <id>5b6b7f27-3df2-353e-0000-000000000000</id>
+            <parentGroupId>15419b28-75b1-38ba-0000-000000000000</parentGroupId>
+            <position>
+                <x>824.0</x>
+                <y>10.879355256045528</y>
+            </position>
+            <versionedComponentId>5b6b7f27-3df2-353e-916c-3d5b9e174e7a</versionedComponentId>
+            <allowRemoteAccess>true</allowRemoteAccess>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <name>ReceiveNotification</name>
+            <state>STOPPED</state>
+            <transmitting>false</transmitting>
+            <type>INPUT_PORT</type>
+        </inputPorts>
+        <inputPorts>
+            <id>65303017-1315-3f95-0000-000000000000</id>
+            <parentGroupId>15419b28-75b1-38ba-0000-000000000000</parentGroupId>
+            <position>
+                <x>77.87672181663493</x>
+                <y>0.0</y>
+            </position>
+            <versionedComponentId>65303017-1315-3f95-8687-3cb9d403975d</versionedComponentId>
+            <allowRemoteAccess>true</allowRemoteAccess>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <name>ReceiveLog</name>
+            <state>STOPPED</state>
+            <transmitting>false</transmitting>
+            <type>INPUT_PORT</type>
+        </inputPorts>
+        <processGroups>
+            <id>045af1ab-d9a6-37e2-0000-000000000000</id>
+            <parentGroupId>15419b28-75b1-38ba-0000-000000000000</parentGroupId>
+            <position>
+                <x>762.0</x>
+                <y>220.87935525604553</y>
+            </position>
+            <versionedComponentId>045af1ab-d9a6-37e2-b6ed-3b152b3b4144</versionedComponentId>
+            <comments></comments>
+            <contents>
+                <connections>
+                    <id>867b2adb-ce89-3fd9-0000-000000000000</id>
+                    <parentGroupId>045af1ab-d9a6-37e2-0000-000000000000</parentGroupId>
+                    <versionedComponentId>867b2adb-ce89-3fd9-b95a-585c40095864</versionedComponentId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>045af1ab-d9a6-37e2-0000-000000000000</groupId>
+                        <id>fb482166-cc20-316a-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>fb482166-cc20-316a-ae1d-1e37e26fd1df</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <source>
+                        <groupId>045af1ab-d9a6-37e2-0000-000000000000</groupId>
+                        <id>ed48be01-b9d7-361e-0000-000000000000</id>
+                        <type>INPUT_PORT</type>
+                        <versionedComponentId>ed48be01-b9d7-361e-a354-46562a6a57d4</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <inputPorts>
+                    <id>ed48be01-b9d7-361e-0000-000000000000</id>
+                    <parentGroupId>045af1ab-d9a6-37e2-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>96.00000274636301</x>
+                        <y>99.00000393717171</y>
+                    </position>
+                    <versionedComponentId>ed48be01-b9d7-361e-a354-46562a6a57d4</versionedComponentId>
+                    <comments></comments>
+                    <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                    <name>EmailInfo</name>
+                    <state>STOPPED</state>
+                    <type>INPUT_PORT</type>
+                </inputPorts>
+                <processors>
+                    <id>fb482166-cc20-316a-0000-000000000000</id>
+                    <parentGroupId>045af1ab-d9a6-37e2-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>651.000002746363</x>
+                        <y>61.0000039371717</y>
+                    </position>
+                    <versionedComponentId>fb482166-cc20-316a-ae1d-1e37e26fd1df</versionedComponentId>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.19.1</version>
+                    </bundle>
+                    <config>
+                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>SMTP Hostname</key>
+<value>
+    <name>SMTP Hostname</name>
+</value>
+                            </entry>
+                            <entry>
+<key>SMTP Port</key>
+<value>
+    <name>SMTP Port</name>
+</value>
+                            </entry>
+                            <entry>
+<key>SMTP Username</key>
+<value>
+    <name>SMTP Username</name>
+</value>
+                            </entry>
+                            <entry>
+<key>SMTP Password</key>
+<value>
+    <name>SMTP Password</name>
+</value>
+                            </entry>
+                            <entry>
+<key>SMTP Auth</key>
+<value>
+    <name>SMTP Auth</name>
+</value>
+                            </entry>
+                            <entry>
+<key>SMTP TLS</key>
+<value>
+    <name>SMTP TLS</name>
+</value>
+                            </entry>
+                            <entry>
+<key>SMTP Socket Factory</key>
+<value>
+    <name>SMTP Socket Factory</name>
+</value>
+                            </entry>
+                            <entry>
+<key>SMTP X-Mailer Header</key>
+<value>
+    <name>SMTP X-Mailer Header</name>
+</value>
+                            </entry>
+                            <entry>
+<key>attribute-name-regex</key>
+<value>
+    <name>attribute-name-regex</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Content Type</key>
+<value>
+    <name>Content Type</name>
+</value>
+                            </entry>
+                            <entry>
+<key>From</key>
+<value>
+    <name>From</name>
+</value>
+                            </entry>
+                            <entry>
+<key>To</key>
+<value>
+    <name>To</name>
+</value>
+                            </entry>
+                            <entry>
+<key>CC</key>
+<value>
+    <name>CC</name>
+</value>
+                            </entry>
+                            <entry>
+<key>BCC</key>
+<value>
+    <name>BCC</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Subject</key>
+<value>
+    <name>Subject</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Message</key>
+<value>
+    <name>Message</name>
+</value>
+                            </entry>
+                            <entry>
+<key>email-ff-content-as-message</key>
+<value>
+    <name>email-ff-content-as-message</name>
+</value>
+                            </entry>
+                            <entry>
+<key>input-character-set</key>
+<value>
+    <name>input-character-set</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Attach File</key>
+<value>
+    <name>Attach File</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Include All Attributes In Message</key>
+<value>
+    <name>Include All Attributes In Message</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>SMTP Hostname</key>
+<value>${hrdd.nifi.smtp.host}</value>
+                            </entry>
+                            <entry>
+<key>SMTP Port</key>
+<value>25</value>
+                            </entry>
+                            <entry>
+<key>SMTP Username</key>
+                            </entry>
+                            <entry>
+<key>SMTP Password</key>
+                            </entry>
+                            <entry>
+<key>SMTP Auth</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>SMTP TLS</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>SMTP Socket Factory</key>
+<value>javax.net.ssl.SSLSocketFactory</value>
+                            </entry>
+                            <entry>
+<key>SMTP X-Mailer Header</key>
+<value>NiFi</value>
+                            </entry>
+                            <entry>
+<key>attribute-name-regex</key>
+                            </entry>
+                            <entry>
+<key>Content Type</key>
+<value>text/html</value>
+                            </entry>
+                            <entry>
+<key>From</key>
+<value>${from}</value>
+                            </entry>
+                            <entry>
+<key>To</key>
+<value>${to}</value>
+                            </entry>
+                            <entry>
+<key>CC</key>
+                            </entry>
+                            <entry>
+<key>BCC</key>
+                            </entry>
+                            <entry>
+<key>Subject</key>
+<value>DXC HRDD+ ${hrdd.nifi.env} - NiFi Error has occurred</value>
+                            </entry>
+                            <entry>
+<key>Message</key>
+<value>${messageBody}</value>
+                            </entry>
+                            <entry>
+<key>email-ff-content-as-message</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>input-character-set</key>
+<value>UTF-8</value>
+                            </entry>
+                            <entry>
+<key>Attach File</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Include All Attributes In Message</key>
+<value>false</value>
+                            </entry>
+                        </properties>
+                        <retryCount>0</retryCount>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>PutEmail</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>success</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.PutEmail</type>
+                </processors>
+            </contents>
+            <defaultBackPressureDataSizeThreshold>1 GB</defaultBackPressureDataSizeThreshold>
+            <defaultBackPressureObjectThreshold>10000</defaultBackPressureObjectThreshold>
+            <defaultFlowFileExpiration>0 sec</defaultFlowFileExpiration>
+            <flowfileConcurrency>UNBOUNDED</flowfileConcurrency>
+            <flowfileOutboundPolicy>STREAM_WHEN_AVAILABLE</flowfileOutboundPolicy>
+            <name>Notification</name>
+            <variables/>
+        </processGroups>
+        <processGroups>
+            <id>34f0cb82-88c7-3c46-0000-000000000000</id>
+            <parentGroupId>15419b28-75b1-38ba-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>226.87935525604553</y>
+            </position>
+            <versionedComponentId>34f0cb82-88c7-3c46-be2b-30884fab12a5</versionedComponentId>
+            <comments></comments>
+            <contents>
+                <connections>
+                    <id>3102eb76-5c1e-307b-0000-000000000000</id>
+                    <parentGroupId>34f0cb82-88c7-3c46-0000-000000000000</parentGroupId>
+                    <versionedComponentId>3102eb76-5c1e-307b-95e9-c51d68e12da3</versionedComponentId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>34f0cb82-88c7-3c46-0000-000000000000</groupId>
+                        <id>2d040197-a1ec-38c5-0000-000000000000</id>
+                        <type>OUTPUT_PORT</type>
+                        <versionedComponentId>2d040197-a1ec-38c5-86be-aa248a07c214</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>34f0cb82-88c7-3c46-0000-000000000000</groupId>
+                        <id>769a6917-7d0b-39ec-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>769a6917-7d0b-39ec-a524-5f7e5ce93c97</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>4e60d6da-7cf0-39cc-0000-000000000000</id>
+                    <parentGroupId>34f0cb82-88c7-3c46-0000-000000000000</parentGroupId>
+                    <versionedComponentId>4e60d6da-7cf0-39cc-872f-3ee42b0f0d6f</versionedComponentId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>34f0cb82-88c7-3c46-0000-000000000000</groupId>
+                        <id>769a6917-7d0b-39ec-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>769a6917-7d0b-39ec-a524-5f7e5ce93c97</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>Error</selectedRelationships>
+                    <source>
+                        <groupId>34f0cb82-88c7-3c46-0000-000000000000</groupId>
+                        <id>01905b09-4626-3753-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>01905b09-4626-3753-871a-92bb0102cdd1</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>6ec47d5b-1a4c-3a51-0000-000000000000</id>
+                    <parentGroupId>34f0cb82-88c7-3c46-0000-000000000000</parentGroupId>
+                    <versionedComponentId>6ec47d5b-1a4c-3a51-bb49-55f265bafdba</versionedComponentId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>34f0cb82-88c7-3c46-0000-000000000000</groupId>
+                        <id>01905b09-4626-3753-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>01905b09-4626-3753-871a-92bb0102cdd1</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <source>
+                        <groupId>34f0cb82-88c7-3c46-0000-000000000000</groupId>
+                        <id>964e78c5-aad0-3001-0000-000000000000</id>
+                        <type>INPUT_PORT</type>
+                        <versionedComponentId>964e78c5-aad0-3001-b2aa-7cdfc470ad19</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>976ee2e6-3fbc-396c-0000-000000000000</id>
+                    <parentGroupId>34f0cb82-88c7-3c46-0000-000000000000</parentGroupId>
+                    <versionedComponentId>976ee2e6-3fbc-396c-93a3-3a51d208c82e</versionedComponentId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>34f0cb82-88c7-3c46-0000-000000000000</groupId>
+                        <id>8059c2fc-d1cd-305e-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>8059c2fc-d1cd-305e-a942-66529bafe60c</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name>Others</name>
+                    <selectedRelationships>Others</selectedRelationships>
+                    <selectedRelationships>unmatched</selectedRelationships>
+                    <source>
+                        <groupId>34f0cb82-88c7-3c46-0000-000000000000</groupId>
+                        <id>01905b09-4626-3753-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>01905b09-4626-3753-871a-92bb0102cdd1</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <inputPorts>
+                    <id>964e78c5-aad0-3001-0000-000000000000</id>
+                    <parentGroupId>34f0cb82-88c7-3c46-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-335.8151557960895</x>
+                        <y>-34.04383744509835</y>
+                    </position>
+                    <versionedComponentId>964e78c5-aad0-3001-b2aa-7cdfc470ad19</versionedComponentId>
+                    <comments></comments>
+                    <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                    <name>LogFlowFile</name>
+                    <state>STOPPED</state>
+                    <type>INPUT_PORT</type>
+                </inputPorts>
+                <outputPorts>
+                    <id>2d040197-a1ec-38c5-0000-000000000000</id>
+                    <parentGroupId>34f0cb82-88c7-3c46-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1391.4221778265671</x>
+                        <y>-57.00062622721737</y>
+                    </position>
+                    <versionedComponentId>2d040197-a1ec-38c5-86be-aa248a07c214</versionedComponentId>
+                    <comments></comments>
+                    <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                    <name>EmailPort</name>
+                    <state>STOPPED</state>
+                    <type>OUTPUT_PORT</type>
+                </outputPorts>
+                <processors>
+                    <id>01905b09-4626-3753-0000-000000000000</id>
+                    <parentGroupId>34f0cb82-88c7-3c46-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>150.8882820090862</x>
+                        <y>-75.94355572970528</y>
+                    </position>
+                    <versionedComponentId>01905b09-4626-3753-871a-92bb0102cdd1</versionedComponentId>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.19.1</version>
+                    </bundle>
+                    <config>
+                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Routing Strategy</key>
+<value>
+    <name>Routing Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Error</key>
+<value>
+    <name>Error</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Others</key>
+<value>
+    <name>Others</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Routing Strategy</key>
+<value>Route to Property name</value>
+                            </entry>
+                            <entry>
+<key>Error</key>
+<value>${logType:equalsIgnoreCase("ERROR")}</value>
+                            </entry>
+                            <entry>
+<key>Others</key>
+<value>${!logType:equalsIgnoreCase("ERROR")}</value>
+                            </entry>
+                        </properties>
+                        <retryCount>0</retryCount>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>CheckLogType</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>Error</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>Others</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>unmatched</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+                </processors>
+                <processors>
+                    <id>769a6917-7d0b-39ec-0000-000000000000</id>
+                    <parentGroupId>34f0cb82-88c7-3c46-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>774.8177405323627</x>
+                        <y>-89.31716517610391</y>
+                    </position>
+                    <versionedComponentId>769a6917-7d0b-39ec-a524-5f7e5ce93c97</versionedComponentId>
+                    <bundle>
+                        <artifact>nifi-update-attribute-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.19.1</version>
+                    </bundle>
+                    <config>
+                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Delete Attributes Expression</key>
+<value>
+    <name>Delete Attributes Expression</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Store State</key>
+<value>
+    <name>Store State</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Stateful Variables Initial Value</key>
+<value>
+    <name>Stateful Variables Initial Value</name>
+</value>
+                            </entry>
+                            <entry>
+<key>canonical-value-lookup-cache-size</key>
+<value>
+    <name>canonical-value-lookup-cache-size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>from</key>
+<value>
+    <name>from</name>
+</value>
+                            </entry>
+                            <entry>
+<key>messageBody</key>
+<value>
+    <name>messageBody</name>
+</value>
+                            </entry>
+                            <entry>
+<key>to</key>
+<value>
+    <name>to</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Delete Attributes Expression</key>
+                            </entry>
+                            <entry>
+<key>Store State</key>
+<value>Do not store state</value>
+                            </entry>
+                            <entry>
+<key>Stateful Variables Initial Value</key>
+                            </entry>
+                            <entry>
+<key>canonical-value-lookup-cache-size</key>
+<value>100</value>
+                            </entry>
+                            <entry>
+<key>from</key>
+<value>${hrdd.nifi.support.emailgroup}</value>
+                            </entry>
+                            <entry>
+<key>messageBody</key>
+<value>&lt;html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40"&gt;&lt;head&gt;&lt;META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=us-ascii"&gt;&lt;meta name=Generator content="Microsoft Word 15 (filtered medium)"&gt;&lt;!--[if !mso]&gt;&lt;style&gt;v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+&lt;/style&gt;&lt;![endif]--&gt;&lt;style&gt;&lt;!--
+/* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:13.0pt;
+	font-family:"Arial",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:windowtext;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:windowtext;
+	text-decoration:underline;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma",sans-serif;}
+p.DXCDate, li.DXCDate, div.DXCDate
+	{mso-style-name:"DXC Date";
+	mso-style-priority:9;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:right;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.DXCStoryTitleLarge, li.DXCStoryTitleLarge, div.DXCStoryTitleLarge
+	{mso-style-name:"DXC Story Title Large";
+	mso-style-priority:9;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:9.0pt;
+	margin-left:0in;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.DXCStoryTitleSmall, li.DXCStoryTitleSmall, div.DXCStoryTitleSmall
+	{mso-style-name:"DXC Story Title Small";
+	mso-style-priority:9;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.DXCSectionTitle, li.DXCSectionTitle, div.DXCSectionTitle
+	{mso-style-name:"DXC Section Title";
+	mso-style-priority:9;
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.DXCMainSubtitle, li.DXCMainSubtitle, div.DXCMainSubtitle
+	{mso-style-name:"DXC Main Subtitle";
+	mso-style-priority:9;
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;}
+p.DXCMainTitle, li.DXCMainTitle, div.DXCMainTitle
+	{mso-style-name:"DXC Main Title";
+	mso-style-priority:9;
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:22.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;}
+p.DXCBullets, li.DXCBullets, div.DXCBullets
+	{mso-style-name:"DXC Bullets";
+	mso-style-priority:9;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.15in;
+	margin-bottom:.0001pt;
+	text-indent:-.15in;
+	mso-list:l0 level1 lfo2;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;}
+span.DXCLink
+	{mso-style-name:"DXC Link";
+	mso-style-priority:9;
+	font-family:"Arial",sans-serif;
+	font-variant:normal !important;
+	color:windowtext;
+	text-transform:uppercase;
+	font-weight:bold;
+	font-style:normal;
+	text-decoration:none none;}
+span.EmailStyle28
+	{mso-style-type:personal;}
+span.EmailStyle29
+	{mso-style-type:personal-reply;
+	font-family:"Calibri",sans-serif;
+	color:#1F497D;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:1358890657;
+	mso-list-type:hybrid;
+	mso-list-template-ids:929714808 777839790 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:"DXC Bullets";
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+--&gt;&lt;/style&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;o:shapedefaults v:ext="edit" spidmax="1027" /&gt;
+&lt;/xml&gt;&lt;![endif]--&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;o:shapelayout v:ext="edit"&gt;
+&lt;o:idmap v:ext="edit" data="1" /&gt;
+&lt;/o:shapelayout&gt;&lt;/xml&gt;&lt;![endif]--&gt;&lt;/head&gt;&lt;body lang=EN-US link="#000000" vlink="#000000"&gt;&lt;div class=WordSection1&gt;&lt;table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=600 style='width:6.25in;border-collapse:collapse'&gt;&lt;tr style='height:.2in'&gt;&lt;td width=38 colspan=2 valign=top style='width:.4in;padding:0in 0in 0in 0in;height:.2in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=523 valign=top style='width:5.45in;padding:0in 0in 0in 0in;height:.2in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=38 valign=top style='width:.4in;padding:0in 0in 0in 0in;height:.2in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style='height:.6in'&gt;&lt;td width=38 colspan=2 valign=top style='width:.4in;padding:0in 0in 0in 0in;height:.6in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=523 valign=top style='width:5.45in;padding:0in 0in 0in 0in;height:.6in'&gt;&lt;table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=523 style='width:5.45in;border-collapse:collapse'&gt;&lt;tr&gt;&lt;td width=144 style='width:1.5in;padding:0in 0in 0in 0in'&gt;&lt;p class=MsoNormal&gt;
+&lt;img width=144 height=24 id="Picture_x0020_1" src="/opt/mount2/nifi/images/dxclogo.jpg"&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=379 style='width:3.95in;padding:0in 0in 0in 0in'&gt;
+&lt;p class=DXCDate&gt; ${now():format('yyyy/MM/dd HH:mm:ss')}&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;td width=38 valign=top style='width:.4in;padding:0in 0in 0in 0in;height:.6in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=600 colspan=4 valign=top style='width:6.25in;padding:0in 0in 0in 0in'&gt;&lt;table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=600 style='width:6.25in;background:black;border-collapse:collapse'&gt;&lt;tr style='height:1.75in;mso-height-rule:exactly'&gt;&lt;td width=38 valign=top style='width:.4in;padding:0in 0in 0in 0in;height:1.75in;mso-height-rule:exactly'&gt;&lt;p class=DXCMainTitle&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=346 style='width:3.6in;padding:0in 0in 0in 0in;height:1.75in;mso-height-rule:exactly'&gt;&lt;p class=DXCMainTitle&gt;Error has occurred!&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;p class=DXCMainSubtitle&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;p class=DXCMainSubtitle&gt;HRDD Support&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=216 valign=top style='width:2.25in;background:transparent;padding:0in 0in 0in 0in;height:1.75in;mso-height-rule:exactly'&gt;&lt;p class=MsoNormal&gt;&lt;!--[if gte vml 1]&gt;&lt;v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f"&gt;
+&lt;v:stroke joinstyle="miter" /&gt;
+&lt;v:formulas&gt;
+&lt;v:f eqn="if lineDrawn pixelLineWidth 0" /&gt;
+&lt;v:f eqn="sum @0 1 0" /&gt;
+&lt;v:f eqn="sum 0 0 @1" /&gt;
+&lt;v:f eqn="prod @2 1 2" /&gt;
+&lt;v:f eqn="prod @3 21600 pixelWidth" /&gt;
+&lt;v:f eqn="prod @3 21600 pixelHeight" /&gt;
+&lt;v:f eqn="sum @0 0 1" /&gt;
+&lt;v:f eqn="prod @6 1 2" /&gt;
+&lt;v:f eqn="prod @7 21600 pixelWidth" /&gt;
+&lt;v:f eqn="sum @8 21600 0" /&gt;
+&lt;v:f eqn="prod @7 21600 pixelHeight" /&gt;
+&lt;v:f eqn="sum @10 21600 0" /&gt;
+&lt;/v:formulas&gt;
+&lt;v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect" /&gt;
+&lt;o:lock v:ext="edit" aspectratio="t" /&gt;
+&lt;/v:shapetype&gt;&lt;v:shape id="Freeform_x0020_5" o:spid="_x0000_s1026" type="#_x0000_t75" style='position:absolute;margin-left:0;margin-top:0;width:75.75pt;height:126pt;z-index:251659264;visibility:visible;mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;mso-position-horizontal-relative:page;mso-position-vertical:absolute;mso-position-vertical-relative:page;mso-width-percent:0;mso-height-percent:0;mso-width-relative:margin;mso-height-relative:margin'&gt;
+&lt;v:imagedata src="/opt/mount2/nifi/images/erroslide.gif" o:title="" /&gt;
+&lt;o:lock v:ext="edit" aspectratio="f" /&gt;
+&lt;w:wrap anchorx="page" anchory="page"/&gt;
+&lt;/v:shape&gt;&lt;![endif]--&gt;&lt;![if !vml]&gt;&lt;span style='mso-ignore:vglayout;position:absolute;z-index:251659264;margin-left:0px;margin-top:0px;width:101px;height:168px'&gt;
+&lt;img width=101 height=168 src="/opt/mount2/nifi/images/erroslide.gif" v:shapes="Freeform_x0020_5"&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style='font-size:10.0pt'&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style='height:.3in'&gt;&lt;td width=6 valign=top style='width:4.5pt;padding:0in 0in 0in 0in;height:.3in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=556 colspan=2 valign=top style='width:416.7pt;padding:0in 0in 0in 0in;height:.3in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=38 valign=top style='width:.4in;padding:0in 0in 0in 0in;height:.3in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=6 valign=top style='width:4.5pt;padding:0in 0in .3in 0in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=556 colspan=2 valign=top style='width:416.7pt;padding:0in 0in .3in 0in'&gt;&lt;table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=523 style='width:5.45in;border-collapse:collapse'&gt;&lt;tr&gt;&lt;td width=523 valign=top style='width:5.45in;padding:0in 0in 0in 0in'&gt;
+&lt;p class=DXCStoryTitleLarge&gt;The following error has occurred in ${hrdd.nifi.env}&lt;span style='font-size:16.0pt'&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal&gt;FileName :${sourcefilename}&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+&lt;p class=MsoNormal&gt;Subscription ID :${subscriptionId}&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+&lt;p class=MsoNormal&gt;Processor :${component}&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+&lt;p class=MsoNormal&gt;Error Details :${error}&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+&lt;p class=MsoNormal&gt;Component ID :${hrdd.nifi.subscription.processorid}&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;p class=MsoNormal&gt;Link to NiFi Admin : &lt;a href="http://${hrdd.nifi.hostname}:${hrdd.nifi.port}/nifi/"&gt;http://${hrdd.nifi.hostname}:${hrdd.nifi.port}/nifi/&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;p class=MsoNormal&gt;PLEASE DO NOT REPLY to this email, as it is system generated&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;p class=MsoNormal&gt;Best Regards&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;p class=MsoNormal&gt;HRDD+ NiFi Team&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;p class=MsoNormal&gt;&lt;span class=DXCLink&gt;&lt;span style='font-size:7.0pt'&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;td width=38 valign=top style='width:.4in;padding:0in 0in .3in 0in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=6 valign=top style='width:4.5pt;padding:0in 0in .3in 0in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=594 colspan=3 style='width:445.5pt;padding:0in 0in 0in 0in'&gt;&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=6 valign=top style='width:4.5pt;padding:0in 0in .3in 0in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=594 colspan=3 style='width:445.5pt;padding:0in 0in 0in 0in'&gt;&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=6 valign=top style='width:4.5pt;padding:0in 0in .3in 0in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=594 colspan=3 style='width:445.5pt;padding:0in 0in 0in 0in'&gt;&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=6 valign=top style='width:4.5pt;padding:0in 0in .3in 0in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=594 colspan=3 style='width:445.5pt;padding:0in 0in 0in 0in'&gt;&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=6 valign=top style='width:4.5pt;padding:0in 0in .3in 0in'&gt;&lt;p class=MsoNormal&gt;&lt;span style='font-size:11.0pt'&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=594 colspan=3 style='width:445.5pt;padding:0in 0in 0in 0in'&gt;&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=6 valign=top style='width:4.5pt;padding:0in 0in .3in 0in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=594 colspan=3 style='width:445.5pt;padding:0in 0in 0in 0in'&gt;&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=6 valign=top style='width:4.5pt;padding:0in 0in .3in 0in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=594 colspan=3 style='width:445.5pt;padding:0in 0in 0in 0in'&gt;&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=6 valign=top style='width:4.5pt;padding:0in 0in .3in 0in'&gt;&lt;p class=MsoNormal&gt;&lt;span style='font-size:11.0pt'&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=594 colspan=3 style='width:445.5pt;padding:0in 0in 0in 0in'&gt;&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=6 valign=top style='width:4.5pt;padding:0in 0in .3in 0in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=594 colspan=3 style='width:445.5pt;padding:0in 0in 0in 0in'&gt;&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=6 valign=top style='width:4.5pt;padding:0in 0in .3in 0in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=594 colspan=3 style='width:445.5pt;padding:0in 0in 0in 0in'&gt;&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=6 valign=top style='width:4.5pt;padding:0in 0in .3in 0in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=594 colspan=3 style='width:445.5pt;padding:0in 0in 0in 0in'&gt;&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style='height:.1in'&gt;&lt;td width=6 valign=top style='width:4.5pt;padding:0in 0in 0in 0in;height:.1in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=556 colspan=2 valign=top style='width:416.7pt;padding:0in 0in 0in 0in;height:.1in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td width=38 valign=top style='width:.4in;padding:0in 0in 0in 0in;height:.1in'&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=6 style='width:4.5pt;padding:0in 0in 0in 0in'&gt;&lt;/td&gt;&lt;td width=32 style='width:24.3pt;padding:0in 0in 0in 0in'&gt;&lt;/td&gt;&lt;td width=523 style='width:5.45in;padding:0in 0in 0in 0in'&gt;&lt;/td&gt;&lt;td width=38 style='width:.4in;padding:0in 0in 0in 0in'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</value>
+                            </entry>
+                            <entry>
+<key>to</key>
+<value>${hrdd.nifi.support.emailgroup}</value>
+                            </entry>
+                        </properties>
+                        <retryCount>0</retryCount>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>Populate Error Report</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
+                </processors>
+                <processors>
+                    <id>8059c2fc-d1cd-305e-0000-000000000000</id>
+                    <parentGroupId>34f0cb82-88c7-3c46-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>155.288181952556</x>
+                        <y>191.17758436075894</y>
+                    </position>
+                    <versionedComponentId>8059c2fc-d1cd-305e-a942-66529bafe60c</versionedComponentId>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.19.1</version>
+                    </bundle>
+                    <config>
+                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Log Level</key>
+<value>
+    <name>Log Level</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Log Payload</key>
+<value>
+    <name>Log Payload</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Attributes to Log</key>
+<value>
+    <name>Attributes to Log</name>
+</value>
+                            </entry>
+                            <entry>
+<key>attributes-to-log-regex</key>
+<value>
+    <name>attributes-to-log-regex</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Attributes to Ignore</key>
+<value>
+    <name>Attributes to Ignore</name>
+</value>
+                            </entry>
+                            <entry>
+<key>attributes-to-ignore-regex</key>
+<value>
+    <name>attributes-to-ignore-regex</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Log FlowFile Properties</key>
+<value>
+    <name>Log FlowFile Properties</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Output Format</key>
+<value>
+    <name>Output Format</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Log prefix</key>
+<value>
+    <name>Log prefix</name>
+</value>
+                            </entry>
+                            <entry>
+<key>character-set</key>
+<value>
+    <name>character-set</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Log Level</key>
+<value>info</value>
+                            </entry>
+                            <entry>
+<key>Log Payload</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Attributes to Log</key>
+                            </entry>
+                            <entry>
+<key>attributes-to-log-regex</key>
+<value>.*</value>
+                            </entry>
+                            <entry>
+<key>Attributes to Ignore</key>
+                            </entry>
+                            <entry>
+<key>attributes-to-ignore-regex</key>
+                            </entry>
+                            <entry>
+<key>Log FlowFile Properties</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Output Format</key>
+<value>Line per Attribute</value>
+                            </entry>
+                            <entry>
+<key>Log prefix</key>
+                            </entry>
+                            <entry>
+<key>character-set</key>
+<value>windows-1252</value>
+                            </entry>
+                        </properties>
+                        <retryCount>0</retryCount>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>Log</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>success</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.LogAttribute</type>
+                </processors>
+            </contents>
+            <defaultBackPressureDataSizeThreshold>1 GB</defaultBackPressureDataSizeThreshold>
+            <defaultBackPressureObjectThreshold>10000</defaultBackPressureObjectThreshold>
+            <defaultFlowFileExpiration>0 sec</defaultFlowFileExpiration>
+            <flowfileConcurrency>UNBOUNDED</flowfileConcurrency>
+            <flowfileOutboundPolicy>STREAM_WHEN_AVAILABLE</flowfileOutboundPolicy>
+            <name>GLEH</name>
+            <variables/>
+        </processGroups>
+    </snippet>
+    <timestamp>10/31/2025 18:43:16 AST</timestamp>
+</template>
