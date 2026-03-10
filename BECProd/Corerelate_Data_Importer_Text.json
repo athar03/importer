@@ -14437,6 +14437,7 @@
         },
         "properties" : {
           "Destination" : "flowfile-attribute",
+          "MRAIsEnabled" : "$.value[0].enabled",
           "Max String Length" : "20 MB",
           "Return Type" : "scalar",
           "Null Value Representation" : "empty string",
@@ -14449,6 +14450,13 @@
             "dynamic" : false,
             "identifiesControllerService" : false,
             "name" : "Destination",
+            "sensitive" : false
+          },
+          "MRAIsEnabled" : {
+            "displayName" : "MRAIsEnabled",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "MRAIsEnabled",
             "sensitive" : false
           },
           "Max String Length" : {
@@ -28483,6 +28491,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "Corerelate_Data_Importer_Text",
-    "timestamp" : 1773168871391
+    "timestamp" : 1773169350697
   }
 }
