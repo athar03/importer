@@ -2409,6 +2409,7 @@
           "ResponsibleAttorney" : "$.ResponsibleAttorney",
           "Destination" : "flowfile-attribute",
           "ClientStatus" : "$.ClientStatusId",
+          "SiteName" : "$.SiteName",
           "Max String Length" : "20 MB",
           "OpenedOn" : "$.OpenedOn",
           "Return Type" : "auto-detect",
@@ -2418,9 +2419,11 @@
           "Null Value Representation" : "empty string",
           "Path Not Found Behavior" : "ignore",
           "ClientName" : "$.ClientName",
+          "MatterType" : "$.MatterType",
           "ClientBillingNo" : "$.ClientBillingNo",
           "ShortTitle" : "$.MatterShortTitle",
           "ClosedOn" : "$.ClosedOn",
+          "DepartmentName" : "$.DepartmentName",
           "Private" : "$.Private",
           "MatterStatus" : "$.MatterStatus"
         },
@@ -2444,6 +2447,13 @@
             "dynamic" : true,
             "identifiesControllerService" : false,
             "name" : "ClientStatus",
+            "sensitive" : false
+          },
+          "SiteName" : {
+            "displayName" : "SiteName",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "SiteName",
             "sensitive" : false
           },
           "Max String Length" : {
@@ -2509,6 +2519,13 @@
             "name" : "ClientName",
             "sensitive" : false
           },
+          "MatterType" : {
+            "displayName" : "MatterType",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "MatterType",
+            "sensitive" : false
+          },
           "ClientBillingNo" : {
             "displayName" : "ClientBillingNo",
             "dynamic" : true,
@@ -2528,6 +2545,13 @@
             "dynamic" : true,
             "identifiesControllerService" : false,
             "name" : "ClosedOn",
+            "sensitive" : false
+          },
+          "DepartmentName" : {
+            "displayName" : "DepartmentName",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "DepartmentName",
             "sensitive" : false
           },
           "Private" : {
@@ -38014,6 +38038,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "BEC_Data_Extractor_Aderant",
-    "timestamp" : 1776790886569
+    "timestamp" : 1776794470737
   }
 }
