@@ -139,8 +139,8 @@
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
       "bends" : [ {
-        "x" : -816.0,
-        "y" : 64.0
+        "x" : -1000.0,
+        "y" : 280.0
       } ],
       "componentType" : "CONNECTION",
       "destination" : {
@@ -202,8 +202,8 @@
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
       "bends" : [ {
-        "x" : -776.0,
-        "y" : 608.0
+        "x" : -720.0,
+        "y" : 648.0
       } ],
       "componentType" : "CONNECTION",
       "destination" : {
@@ -264,8 +264,8 @@
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
       "bends" : [ {
-        "x" : -392.0,
-        "y" : 768.0
+        "x" : -496.0,
+        "y" : 1064.0
       } ],
       "componentType" : "CONNECTION",
       "destination" : {
@@ -326,7 +326,10 @@
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
+      "bends" : [ {
+        "x" : -2384.0,
+        "y" : 2800.0
+      } ],
       "componentType" : "CONNECTION",
       "destination" : {
         "comments" : "",
@@ -338,7 +341,7 @@
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "59ea743b-1fcc-38d5-b4fd-40f45290964e",
-      "labelIndex" : 1,
+      "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
       "name" : "",
@@ -357,8 +360,8 @@
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
       "bends" : [ {
-        "x" : -744.0,
-        "y" : 344.0
+        "x" : -800.0,
+        "y" : 512.0
       } ],
       "componentType" : "CONNECTION",
       "destination" : {
@@ -539,8 +542,8 @@
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
       "bends" : [ {
-        "x" : -2288.0,
-        "y" : 1497.0
+        "x" : -2272.0,
+        "y" : 1464.0
       } ],
       "componentType" : "CONNECTION",
       "destination" : {
@@ -695,8 +698,8 @@
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
       "bends" : [ {
-        "x" : -2416.0,
-        "y" : 48.0
+        "x" : -2376.0,
+        "y" : 248.0
       } ],
       "componentType" : "CONNECTION",
       "destination" : {
@@ -727,7 +730,7 @@
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
       "bends" : [ {
-        "x" : -2672.0,
+        "x" : -2648.0,
         "y" : 1720.0
       } ],
       "componentType" : "CONNECTION",
@@ -823,8 +826,8 @@
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
       "bends" : [ {
-        "x" : -776.0,
-        "y" : 480.0
+        "x" : -720.0,
+        "y" : 784.0
       } ],
       "componentType" : "CONNECTION",
       "destination" : {
@@ -883,7 +886,10 @@
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
+      "bends" : [ {
+        "x" : -2912.0,
+        "y" : 2792.0
+      } ],
       "componentType" : "CONNECTION",
       "destination" : {
         "comments" : "",
@@ -895,7 +901,7 @@
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "e831e829-2a23-3418-8c20-9613e50cbefd",
-      "labelIndex" : 1,
+      "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
       "name" : "",
@@ -944,8 +950,8 @@
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
       "bends" : [ {
-        "x" : -1912.0,
-        "y" : 32.0
+        "x" : -1872.0,
+        "y" : 256.0
       } ],
       "componentType" : "CONNECTION",
       "destination" : {
@@ -1644,8 +1650,8 @@
       } ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -2344.0,
-        "y" : 112.0
+        "x" : -2312.0,
+        "y" : 320.0
       },
       "processGroups" : [ ],
       "processors" : [ {
@@ -2380,8 +2386,8 @@
       "outputPorts" : [ ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -2056.0,
-        "y" : 2520.0
+        "x" : -2328.0,
+        "y" : 2536.0
       },
       "processGroups" : [ {
         "comments" : "",
@@ -3119,7 +3125,7 @@
         },
         "properties" : {
           "Routing Strategy" : "Route to Property name",
-          "ValidateMatter" : "${LatestclientId:trim():equalsIgnoreCase(${ClientId:trim()}):and( \n${LatestmatterStatusId:trim():equalsIgnoreCase(${MatterStatusId:trim()})}):and(\n${LatestPracticeId:trim():equalsIgnoreCase(${PracticeId:trim()})}):and(\n${LatestMatterName:trim():equalsIgnoreCase(${MatterName:trim()})}):and(\n${LatestOpenedOn:trim():equalsIgnoreCase(${OpenedOn:trim()})}):and(\n${LatestClosedOn:trim():equalsIgnoreCase(${ClosedOn:trim()})}\n)}"
+          "ValidateMatter" : "${LatestclientId:trim():equalsIgnoreCase(${ClientId:trim()}):and( \n${LatestmatterStatusId:trim():equalsIgnoreCase(${MatterStatusId:trim()})}):and(\n${LatestPracticeId:trim():equalsIgnoreCase(${PracticeId:trim()})}):and(\n${LatestMatterName:trim():equalsIgnoreCase(${MatterName:trim()})}):and(\n${LatestOpenedOn:trim():equalsIgnoreCase(${OpenedOn:trim()})}):and(\n${LatestClosedOn:trim():equalsIgnoreCase(${ClosedOn:trim()})}):and(\n${LatestResponsibleAttorneyId:trim():equalsIgnoreCase(${MatterResponsibleAttorneysId:trim()})}\n)}"
         },
         "propertyDescriptors" : {
           "Routing Strategy" : {
@@ -3491,7 +3497,7 @@
         },
         "properties" : {
           "Regular Expression" : "(?s)(^.*$)",
-          "Replacement Value" : "{\n\"id\":\"${MatterId}\",\n\"clientId\": \"${ClientId}\",\n\"billingNo\": \"${MatterBillingNo}\",\n\"matterStatusId\": \"${MatterStatusId}\",\n\"name\": \"${MatterName:escapeJson()}\",\n\"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n\"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n\"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n\"PracticeId\" : \"${PracticeId}\",\n\"responsibleAttorneyId\":${MatterResponsibleAttorneys:isEmpty():ifElse('null',${MatterResponsibleAttorneys:prepend('\"'):append('\"')})},\n\"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n\"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n\"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})}\n}",
+          "Replacement Value" : "{\n\"id\":\"${MatterId}\",\n\"clientId\": \"${ClientId}\",\n\"billingNo\": \"${MatterBillingNo}\",\n\"matterStatusId\": \"${MatterStatusId}\",\n\"name\": \"${MatterName:escapeJson()}\",\n\"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n\"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n\"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n\"PracticeId\" : \"${PracticeId}\",\n\"responsibleAttorneyId\":${MatterResponsibleAttorneysId:isEmpty():ifElse('null',${MatterResponsibleAttorneysId:prepend('\"'):append('\"')})},\n\"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n\"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n\"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})}\n}",
           "Evaluation Mode" : "Entire text",
           "Line-by-Line Evaluation Mode" : "All",
           "Character Set" : "UTF-8",
@@ -3914,7 +3920,7 @@
       "parameterContextName" : "Importer Basic Params",
       "position" : {
         "x" : -2848.0,
-        "y" : 432.0
+        "y" : 560.0
       },
       "processGroups" : [ {
         "comments" : "",
@@ -5703,8 +5709,8 @@
       "outputPorts" : [ ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -2848.0,
-        "y" : -264.0
+        "x" : -2872.0,
+        "y" : -176.0
       },
       "processGroups" : [ ],
       "processors" : [ {
@@ -7349,8 +7355,8 @@
       } ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -2032.0,
-        "y" : 424.0
+        "x" : -1976.0,
+        "y" : 584.0
       },
       "processGroups" : [ {
         "comments" : "",
@@ -9944,7 +9950,7 @@
       } ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -2856.0,
+        "x" : -2840.0,
         "y" : 864.0
       },
       "processGroups" : [ {
@@ -12581,8 +12587,8 @@
       } ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -1344.0,
-        "y" : 400.0
+        "x" : -1312.0,
+        "y" : 584.0
       },
       "processGroups" : [ {
         "comments" : "",
@@ -13766,37 +13772,7 @@
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "75de7e82-019c-1000-4b6c-4eea0d1ef2aa",
-        "identifier" : "0fdf2a65-061a-3aa7-9335-a4664e5e3100",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "success" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "75de7e82-019c-1000-4b6c-4eea0d1ef2aa",
-          "id" : "950d79ab-019c-1000-ba9c-8fc43eed5870",
-          "name" : "Validate MRA Status",
-          "type" : "PROCESSOR"
-        },
-        "zIndex" : 17
-      }, {
-        "backPressureDataSizeThreshold" : "1 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "comments" : "",
-          "groupId" : "75de7e82-019c-1000-4b6c-4eea0d1ef2aa",
-          "id" : "950d79ab-019c-1000-ba9c-8fc43eed5870",
-          "name" : "Validate MRA Status",
-          "type" : "PROCESSOR"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "75de7e82-019c-1000-4b6c-4eea0d1ef2aa",
-        "identifier" : "254f6fd8-f606-3145-9b01-7ee4fd5a75fd",
+        "identifier" : "266410be-978d-398d-9ac6-ad097691d628",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
         "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -14110,7 +14086,7 @@
       } ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -2856.0,
+        "x" : -2840.0,
         "y" : 1176.0
       },
       "processGroups" : [ {
@@ -14711,8 +14687,8 @@
           "MRAIsEnabled" : "$.value[0].enabled",
           "Max String Length" : "20 MB",
           "Return Type" : "scalar",
+          "MatterResponsibleAttorneysId" : "$.value[0].id",
           "Null Value Representation" : "empty string",
-          "MatterResponsibleAttorneys" : "$.value[0].id",
           "Path Not Found Behavior" : "ignore"
         },
         "propertyDescriptors" : {
@@ -14744,18 +14720,18 @@
             "name" : "Return Type",
             "sensitive" : false
           },
+          "MatterResponsibleAttorneysId" : {
+            "displayName" : "MatterResponsibleAttorneysId",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "MatterResponsibleAttorneysId",
+            "sensitive" : false
+          },
           "Null Value Representation" : {
             "displayName" : "Null Value Representation",
             "dynamic" : false,
             "identifiesControllerService" : false,
             "name" : "Null Value Representation",
-            "sensitive" : false
-          },
-          "MatterResponsibleAttorneys" : {
-            "displayName" : "MatterResponsibleAttorneys",
-            "dynamic" : true,
-            "identifiesControllerService" : false,
-            "name" : "MatterResponsibleAttorneys",
             "sensitive" : false
           },
           "Path Not Found Behavior" : {
@@ -14809,7 +14785,7 @@
           "Socket Idle Connections" : "5",
           "Request Body Enabled" : "true",
           "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
-          "HTTP URL" : "#{BaseURL}/v1/users?filter=emailAddress eq '${ResponsibleAttorney}'",
+          "HTTP URL" : "#{BaseURL}/v1/users?filter=emailAddress eq '${ResponsibleAttorney:urlEncode()}'",
           "Socket Idle Timeout" : "5 mins",
           "Response Redirects Enabled" : "True",
           "Socket Write Timeout" : "15 secs",
@@ -15170,79 +15146,6 @@
         "schedulingStrategy" : "TIMER_DRIVEN",
         "style" : { },
         "type" : "org.apache.nifi.processors.standard.RetryFlowFile",
-        "yieldDuration" : "1 sec"
-      }, {
-        "autoTerminatedRelationships" : [ ],
-        "backoffMechanism" : "PENALIZE_FLOWFILE",
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "nifi-update-attribute-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.5.0"
-        },
-        "comments" : "",
-        "componentType" : "PROCESSOR",
-        "concurrentlySchedulableTaskCount" : 1,
-        "executionNode" : "ALL",
-        "groupIdentifier" : "75de7e82-019c-1000-4b6c-4eea0d1ef2aa",
-        "identifier" : "950d79ab-019c-1000-ba9c-8fc43eed5870",
-        "maxBackoffPeriod" : "10 mins",
-        "name" : "Validate MRA Status",
-        "penaltyDuration" : "30 sec",
-        "position" : {
-          "x" : 640.0,
-          "y" : -312.0
-        },
-        "properties" : {
-          "Store State" : "Do not store state",
-          "canonical-value-lookup-cache-size" : "100",
-          "MatterResponsibleAttorneys" : "${MRAIsEnabled:equals(true):ifElse(${MatterResponsibleAttorneys},'')}"
-        },
-        "propertyDescriptors" : {
-          "Delete Attributes Expression" : {
-            "displayName" : "Delete Attributes Expression",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Delete Attributes Expression",
-            "sensitive" : false
-          },
-          "Store State" : {
-            "displayName" : "Store State",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Store State",
-            "sensitive" : false
-          },
-          "canonical-value-lookup-cache-size" : {
-            "displayName" : "Cache Value Lookup Cache Size",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "canonical-value-lookup-cache-size",
-            "sensitive" : false
-          },
-          "Stateful Variables Initial Value" : {
-            "displayName" : "Stateful Variables Initial Value",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Stateful Variables Initial Value",
-            "sensitive" : false
-          },
-          "MatterResponsibleAttorneys" : {
-            "displayName" : "MatterResponsibleAttorneys",
-            "dynamic" : true,
-            "identifiesControllerService" : false,
-            "name" : "MatterResponsibleAttorneys",
-            "sensitive" : false
-          }
-        },
-        "retriedRelationships" : [ ],
-        "retryCount" : 10,
-        "runDurationMillis" : 25,
-        "scheduledState" : "ENABLED",
-        "schedulingPeriod" : "0 sec",
-        "schedulingStrategy" : "TIMER_DRIVEN",
-        "style" : { },
-        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
         "yieldDuration" : "1 sec"
       } ],
       "remoteProcessGroups" : [ ],
@@ -15751,8 +15654,8 @@
       } ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -584.0,
-        "y" : 504.0
+        "x" : -576.0,
+        "y" : 592.0
       },
       "processGroups" : [ {
         "comments" : "",
@@ -17459,8 +17362,8 @@
       } ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -1320.0,
-        "y" : 680.0
+        "x" : -1208.0,
+        "y" : 1008.0
       },
       "processGroups" : [ {
         "comments" : "",
@@ -19001,7 +18904,7 @@
       } ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -2864.0,
+        "x" : -2840.0,
         "y" : 1480.0
       },
       "processGroups" : [ {
@@ -20286,7 +20189,7 @@
           "Socket Idle Connections" : "5",
           "Request Body Enabled" : "true",
           "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
-          "HTTP URL" : "#{BaseURL}/v1/mattertypes?filter=name eq '${MatterType}'",
+          "HTTP URL" : "#{BaseURL}/v1/mattertypes?filter=name eq '${MatterType:urlEncode()}'",
           "Socket Idle Timeout" : "5 mins",
           "Response Redirects Enabled" : "True",
           "Socket Write Timeout" : "15 secs",
@@ -21121,7 +21024,7 @@
       } ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -2856.0,
+        "x" : -2840.0,
         "y" : 1792.0
       },
       "processGroups" : [ {
@@ -22406,7 +22309,7 @@
           "Socket Idle Connections" : "5",
           "Request Body Enabled" : "true",
           "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
-          "HTTP URL" : "#{BaseURL}/v1/departments?filter=name eq '${DepartmentName}'",
+          "HTTP URL" : "#{BaseURL}/v1/departments?filter=name eq '${DepartmentName:urlEncode()}'",
           "Socket Idle Timeout" : "5 mins",
           "Response Redirects Enabled" : "True",
           "Socket Write Timeout" : "15 secs",
@@ -23198,7 +23101,7 @@
       } ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -2848.0,
+        "x" : -2840.0,
         "y" : 2104.0
       },
       "processGroups" : [ {
@@ -24252,7 +24155,7 @@
           "Socket Idle Connections" : "5",
           "Request Body Enabled" : "true",
           "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
-          "HTTP URL" : "#{BaseURL}/v1/sites?filter=name eq '${SiteName}'",
+          "HTTP URL" : "#{BaseURL}/v1/sites?filter=name eq '${SiteName:urlEncode()}'",
           "Socket Idle Timeout" : "5 mins",
           "Response Redirects Enabled" : "True",
           "Socket Write Timeout" : "15 secs",
@@ -28633,8 +28536,8 @@
       } ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -2856.0,
-        "y" : 120.0
+        "x" : -2832.0,
+        "y" : 312.0
       },
       "processGroups" : [ ],
       "processors" : [ {
@@ -29177,8 +29080,8 @@
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
         "bends" : [ {
-          "x" : -832.0,
-          "y" : -88.0
+          "x" : -768.0,
+          "y" : -72.0
         } ],
         "componentType" : "CONNECTION",
         "destination" : {
@@ -29507,8 +29410,8 @@
         "name" : "Matter",
         "portFunction" : "STANDARD",
         "position" : {
-          "x" : -1096.0,
-          "y" : 48.0
+          "x" : -1080.0,
+          "y" : 16.0
         },
         "scheduledState" : "ENABLED",
         "type" : "INPUT_PORT"
@@ -29526,8 +29429,8 @@
         "name" : "Matter Doesn't Exist",
         "portFunction" : "STANDARD",
         "position" : {
-          "x" : 1352.0,
-          "y" : -168.0
+          "x" : 1360.0,
+          "y" : -152.0
         },
         "scheduledState" : "ENABLED",
         "type" : "OUTPUT_PORT"
@@ -29549,7 +29452,7 @@
       } ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -2832.0,
+        "x" : -2840.0,
         "y" : 2536.0
       },
       "processGroups" : [ {
@@ -29757,8 +29660,8 @@
         } ],
         "parameterContextName" : "Importer Basic Params",
         "position" : {
-          "x" : -576.0,
-          "y" : -368.0
+          "x" : -664.0,
+          "y" : -400.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -30306,7 +30209,7 @@
         "name" : "Get Matter Record",
         "penaltyDuration" : "30 sec",
         "position" : {
-          "x" : -40.0,
+          "x" : 8.0,
           "y" : -8.0
         },
         "properties" : {
@@ -30692,6 +30595,7 @@
           "Path Not Found Behavior" : "ignore",
           "LatestclientId" : "$.clientId",
           "LatestmatterStatusId" : "$.matterStatusId",
+          "LatestResponsibleAttorneyId" : "$.responsibleAttorneyId",
           "LatestShortTitle" : "$.shortTitle",
           "MattersId" : "$.id",
           "LatestPracticeId" : "$.practiceId"
@@ -30767,6 +30671,13 @@
             "name" : "LatestmatterStatusId",
             "sensitive" : false
           },
+          "LatestResponsibleAttorneyId" : {
+            "displayName" : "LatestResponsibleAttorneyId",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "LatestResponsibleAttorneyId",
+            "sensitive" : false
+          },
           "LatestShortTitle" : {
             "displayName" : "LatestShortTitle",
             "dynamic" : true,
@@ -30817,8 +30728,8 @@
         "name" : "Prepare Matter Request Payload",
         "penaltyDuration" : "30 sec",
         "position" : {
-          "x" : -776.0,
-          "y" : 32.0
+          "x" : -696.0,
+          "y" : 8.0
         },
         "properties" : {
           "Regular Expression" : "(?s)(^.*$)",
@@ -31328,8 +31239,8 @@
       } ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -1856.0,
-        "y" : 104.0
+        "x" : -1848.0,
+        "y" : 320.0
       },
       "processGroups" : [ {
         "comments" : "",
@@ -35448,8 +35359,8 @@
       "outputPorts" : [ ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -3664.0,
-        "y" : 2552.0
+        "x" : -3392.0,
+        "y" : 2536.0
       },
       "processGroups" : [ {
         "comments" : "",
@@ -36938,8 +36849,8 @@
       } ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -576.0,
-        "y" : 144.0
+        "x" : -584.0,
+        "y" : 288.0
       },
       "processGroups" : [ {
         "comments" : "",
@@ -38340,6 +38251,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "Corerelate_Data_Importer_Text",
-    "timestamp" : 1776790084536
+    "timestamp" : 1776885618238
   }
 }
