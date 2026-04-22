@@ -7019,8 +7019,8 @@
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
           "bends" : [ {
-            "x" : -32.0,
-            "y" : -280.0
+            "x" : -48.0,
+            "y" : -312.0
           } ],
           "componentType" : "CONNECTION",
           "destination" : {
@@ -7085,8 +7085,8 @@
           "name" : "MatterStatusId Not Found ",
           "portFunction" : "STANDARD",
           "position" : {
-            "x" : 160.0,
-            "y" : -88.0
+            "x" : 96.0,
+            "y" : 32.0
           },
           "scheduledState" : "ENABLED",
           "type" : "OUTPUT_PORT"
@@ -7099,8 +7099,8 @@
           "name" : "MatterStatusId Found",
           "portFunction" : "STANDARD",
           "position" : {
-            "x" : 56.0,
-            "y" : -216.0
+            "x" : 64.0,
+            "y" : -256.0
           },
           "scheduledState" : "ENABLED",
           "type" : "OUTPUT_PORT"
@@ -7601,8 +7601,8 @@
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
           "bends" : [ {
-            "x" : -832.0,
-            "y" : -344.0
+            "x" : -768.0,
+            "y" : -336.0
           } ],
           "componentType" : "CONNECTION",
           "destination" : {
@@ -16243,7 +16243,7 @@
         },
         "properties" : {
           "Regular Expression" : "(?s)(^.*$)",
-          "Replacement Value" : "{\n\"id\":\"${MatterId}\",\n\"clientId\": \"${ClientId}\",\n\"billingNo\": \"${MatterBillingNo}\",\n\"matterStatusId\": \"${MatterStatusId}\",\n\"name\": \"${MatterName:escapeJson()}\",\n\"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n\"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n\"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n\"PracticeId\" : \"${PracticeId}\",\n\"responsibleAttorneyId\":${MatterResponsibleAttorneys:isEmpty():ifElse('null',${MatterResponsibleAttorneys:prepend('\"'):append('\"')})},\n\"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n\"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n\"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})}\n}",
+          "Replacement Value" : "{\n\"id\":\"${MatterId}\",\n\"clientId\": \"${ClientId}\",\n\"billingNo\": \"${MatterBillingNo}\",\n\"matterStatusId\": \"${MatterStatusId}\",\n\"name\": \"${MatterName:escapeJson()}\",\n\"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n\"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n\"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n\"PracticeId\" : \"${PracticeId}\",\n\"responsibleAttorneyId\":${MatterResponsibleAttorneysId:isEmpty():ifElse('null',${MatterResponsibleAttorneysId:prepend('\"'):append('\"')})},\n\"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n\"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n\"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})}\n}",
           "Evaluation Mode" : "Entire text",
           "Line-by-Line Evaluation Mode" : "All",
           "Character Set" : "UTF-8",
@@ -16855,7 +16855,7 @@
         },
         "properties" : {
           "Routing Strategy" : "Route to Property name",
-          "ValidateMatter" : "${LatestclientId:trim():equalsIgnoreCase(${ClientId:trim()}):and( \n${LatestmatterStatusId:trim():equalsIgnoreCase(${MatterStatusId:trim()})}):and(\n${LatestPracticeId:trim():equalsIgnoreCase(${PracticeId:trim()})}):and(\n${LatestMatterName:trim():equalsIgnoreCase(${MatterName:trim()})}):and(\n${LatestOpenedOn:trim():equalsIgnoreCase(${OpenedOn:trim()})}):and(\n${LatestClosedOn:trim():equalsIgnoreCase(${ClosedOn:trim()})}\n)}"
+          "ValidateMatter" : "${LatestclientId:trim():equalsIgnoreCase(${ClientId:trim()}):and( \n${LatestmatterStatusId:trim():equalsIgnoreCase(${MatterStatusId:trim()})}):and(\n${LatestPracticeId:trim():equalsIgnoreCase(${PracticeId:trim()})}):and(\n${LatestMatterName:trim():equalsIgnoreCase(${MatterName:trim()})}):and(\n${LatestOpenedOn:trim():equalsIgnoreCase(${OpenedOn:trim()})}):and(\n${LatestClosedOn:trim():equalsIgnoreCase(${ClosedOn:trim()})}):and(\n${LatestResponsibleAttorneyId:trim():equalsIgnoreCase(${MatterResponsibleAttorneysId:trim()})}\n)}"
         },
         "propertyDescriptors" : {
           "Routing Strategy" : {
@@ -18544,7 +18544,7 @@
           "Socket Idle Connections" : "5",
           "Request Body Enabled" : "true",
           "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
-          "HTTP URL" : "#{BaseURL}/v1/departments?filter=name eq '${DepartmentName}'",
+          "HTTP URL" : "#{BaseURL}/v1/departments?filter=name eq '${DepartmentName:urlEncode()}'",
           "Socket Idle Timeout" : "5 mins",
           "Response Redirects Enabled" : "True",
           "Socket Write Timeout" : "15 secs",
@@ -20946,7 +20946,7 @@
           "Socket Idle Connections" : "5",
           "Request Body Enabled" : "true",
           "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
-          "HTTP URL" : "#{BaseURL}/v1/mattertypes?filter=name eq '${MatterType}'",
+          "HTTP URL" : "#{BaseURL}/v1/mattertypes?filter=name eq '${MatterType:urlEncode()}'",
           "Socket Idle Timeout" : "5 mins",
           "Response Redirects Enabled" : "True",
           "Socket Write Timeout" : "15 secs",
@@ -28874,7 +28874,7 @@
           "Socket Idle Connections" : "5",
           "Request Body Enabled" : "true",
           "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
-          "HTTP URL" : "#{BaseURL}/v1/sites?filter=name eq '${SiteName}'",
+          "HTTP URL" : "#{BaseURL}/v1/sites?filter=name eq '${SiteName:urlEncode()}'",
           "Socket Idle Timeout" : "5 mins",
           "Response Redirects Enabled" : "True",
           "Socket Write Timeout" : "15 secs",
@@ -30830,37 +30830,7 @@
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "b0f99464-019d-1000-9c01-35b68d77aa83",
-        "identifier" : "b0f99480-019d-1000-7019-ab1ea2e2f0e4",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "success" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "b0f99464-019d-1000-9c01-35b68d77aa83",
-          "id" : "b0f9946a-019d-1000-b8a0-c8171ed01091",
-          "name" : "Validate MRA Status",
-          "type" : "PROCESSOR"
-        },
-        "zIndex" : 17
-      }, {
-        "backPressureDataSizeThreshold" : "1 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "comments" : "",
-          "groupId" : "b0f99464-019d-1000-9c01-35b68d77aa83",
-          "id" : "b0f9946a-019d-1000-b8a0-c8171ed01091",
-          "name" : "Validate MRA Status",
-          "type" : "PROCESSOR"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "b0f99464-019d-1000-9c01-35b68d77aa83",
-        "identifier" : "b0f99481-019d-1000-e464-de7650da0e8a",
+        "identifier" : "fba972be-a3ff-3de3-8a88-e74412bef888",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
         "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -31698,7 +31668,7 @@
           "Socket Idle Connections" : "5",
           "Request Body Enabled" : "true",
           "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
-          "HTTP URL" : "#{BaseURL}/v1/users?filter=emailAddress eq '${ResponsibleAttorney}'",
+          "HTTP URL" : "#{BaseURL}/v1/users?filter=emailAddress eq '${ResponsibleAttorney:urlEncode()}'",
           "Socket Idle Timeout" : "5 mins",
           "Response Redirects Enabled" : "True",
           "Socket Write Timeout" : "15 secs",
@@ -31984,79 +31954,6 @@
         "schedulingStrategy" : "TIMER_DRIVEN",
         "style" : { },
         "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
-        "yieldDuration" : "1 sec"
-      }, {
-        "autoTerminatedRelationships" : [ ],
-        "backoffMechanism" : "PENALIZE_FLOWFILE",
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "nifi-update-attribute-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.5.0"
-        },
-        "comments" : "",
-        "componentType" : "PROCESSOR",
-        "concurrentlySchedulableTaskCount" : 1,
-        "executionNode" : "ALL",
-        "groupIdentifier" : "b0f99464-019d-1000-9c01-35b68d77aa83",
-        "identifier" : "b0f9946a-019d-1000-b8a0-c8171ed01091",
-        "maxBackoffPeriod" : "10 mins",
-        "name" : "Validate MRA Status",
-        "penaltyDuration" : "30 sec",
-        "position" : {
-          "x" : 640.0,
-          "y" : -312.0
-        },
-        "properties" : {
-          "Store State" : "Do not store state",
-          "canonical-value-lookup-cache-size" : "100",
-          "MatterResponsibleAttorneys" : "${MRAIsEnabled:equals(true):ifElse(${MatterResponsibleAttorneys},'')}"
-        },
-        "propertyDescriptors" : {
-          "Delete Attributes Expression" : {
-            "displayName" : "Delete Attributes Expression",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Delete Attributes Expression",
-            "sensitive" : false
-          },
-          "Store State" : {
-            "displayName" : "Store State",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Store State",
-            "sensitive" : false
-          },
-          "canonical-value-lookup-cache-size" : {
-            "displayName" : "Cache Value Lookup Cache Size",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "canonical-value-lookup-cache-size",
-            "sensitive" : false
-          },
-          "Stateful Variables Initial Value" : {
-            "displayName" : "Stateful Variables Initial Value",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Stateful Variables Initial Value",
-            "sensitive" : false
-          },
-          "MatterResponsibleAttorneys" : {
-            "displayName" : "MatterResponsibleAttorneys",
-            "dynamic" : true,
-            "identifiesControllerService" : false,
-            "name" : "MatterResponsibleAttorneys",
-            "sensitive" : false
-          }
-        },
-        "retriedRelationships" : [ ],
-        "retryCount" : 10,
-        "runDurationMillis" : 25,
-        "scheduledState" : "ENABLED",
-        "schedulingPeriod" : "0 sec",
-        "schedulingStrategy" : "TIMER_DRIVEN",
-        "style" : { },
-        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
         "yieldDuration" : "1 sec"
       } ],
       "remoteProcessGroups" : [ ],
@@ -38038,6 +37935,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "BEC_Data_Extractor_Aderant",
-    "timestamp" : 1776794470737
+    "timestamp" : 1776885627145
   }
 }
