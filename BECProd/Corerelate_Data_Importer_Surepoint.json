@@ -16249,7 +16249,7 @@
         },
         "properties" : {
           "Regular Expression" : "(?s)(^.*$)",
-          "Replacement Value" : "{\n\"id\":\"${MatterId}\",\n\"clientId\": \"${ClientId}\",\n\"billingNo\": \"${MatterBillingNo}\",\n\"matterStatusId\": \"${MatterStatusId}\",\n\"name\": \"${MatterName:escapeJson()}\",\n\"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n\"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n\"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n\"PracticeId\" : \"${PracticeId}\",\n\"responsibleAttorneyId\":${MatterResponsibleAttorneys:isEmpty():ifElse('null',${MatterResponsibleAttorneys:prepend('\"'):append('\"')})},\n\"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n\"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n\"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})}\n}",
+          "Replacement Value" : "{\n\"id\":\"${MatterId}\",\n\"clientId\": \"${ClientId}\",\n\"billingNo\": \"${MatterBillingNo}\",\n\"matterStatusId\": \"${MatterStatusId}\",\n\"name\": \"${MatterName:escapeJson()}\",\n\"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n\"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n\"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n\"PracticeId\" : \"${PracticeId}\",\n\"responsibleAttorneyId\":${MatterResponsibleAttorneysId:isEmpty():ifElse('null',${MatterResponsibleAttorneysId:prepend('\"'):append('\"')})},\n\"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n\"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n\"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})}\n}",
           "Evaluation Mode" : "Entire text",
           "Line-by-Line Evaluation Mode" : "All",
           "Character Set" : "UTF-8",
@@ -16861,7 +16861,7 @@
         },
         "properties" : {
           "Routing Strategy" : "Route to Property name",
-          "ValidateMatter" : "${LatestclientId:trim():equalsIgnoreCase(${ClientId:trim()}):and( \n${LatestmatterStatusId:trim():equalsIgnoreCase(${MatterStatusId:trim()})}):and(\n${LatestPracticeId:trim():equalsIgnoreCase(${PracticeId:trim()})}):and(\n${LatestMatterName:trim():equalsIgnoreCase(${MatterName:trim()})}):and(\n${LatestOpenedOn:trim():equalsIgnoreCase(${OpenedOn:trim()})}):and(\n${LatestClosedOn:trim():equalsIgnoreCase(${ClosedOn:trim()})}\n)}"
+          "ValidateMatter" : "${LatestclientId:trim():equalsIgnoreCase(${ClientId:trim()}):and( \n${LatestmatterStatusId:trim():equalsIgnoreCase(${MatterStatusId:trim()})}):and(\n${LatestPracticeId:trim():equalsIgnoreCase(${PracticeId:trim()})}):and(\n${LatestMatterName:trim():equalsIgnoreCase(${MatterName:trim()})}):and(\n${LatestOpenedOn:trim():equalsIgnoreCase(${OpenedOn:trim()})}):and(\n${LatestClosedOn:trim():equalsIgnoreCase(${ClosedOn:trim()})}):and(\n${LatestResponsibleAttorneyId:trim():equalsIgnoreCase(${MatterResponsibleAttorneysId:trim()})}\n)}"
         },
         "propertyDescriptors" : {
           "Routing Strategy" : {
@@ -18550,7 +18550,7 @@
           "Socket Idle Connections" : "5",
           "Request Body Enabled" : "true",
           "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
-          "HTTP URL" : "#{BaseURL}/v1/departments?filter=name eq '${DepartmentName}'",
+          "HTTP URL" : "#{BaseURL}/v1/departments?filter=name eq '${DepartmentName:urlEncode()}'",
           "Socket Idle Timeout" : "5 mins",
           "Response Redirects Enabled" : "True",
           "Socket Write Timeout" : "15 secs",
@@ -20952,7 +20952,7 @@
           "Socket Idle Connections" : "5",
           "Request Body Enabled" : "true",
           "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
-          "HTTP URL" : "#{BaseURL}/v1/mattertypes?filter=name eq '${MatterType}'",
+          "HTTP URL" : "#{BaseURL}/v1/mattertypes?filter=name eq '${MatterType:urlEncode()}'",
           "Socket Idle Timeout" : "5 mins",
           "Response Redirects Enabled" : "True",
           "Socket Write Timeout" : "15 secs",
@@ -28880,7 +28880,7 @@
           "Socket Idle Connections" : "5",
           "Request Body Enabled" : "true",
           "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
-          "HTTP URL" : "#{BaseURL}/v1/sites?filter=name eq '${SiteName}'",
+          "HTTP URL" : "#{BaseURL}/v1/sites?filter=name eq '${SiteName:urlEncode()}'",
           "Socket Idle Timeout" : "5 mins",
           "Response Redirects Enabled" : "True",
           "Socket Write Timeout" : "15 secs",
@@ -30580,6 +30580,36 @@
         "destination" : {
           "comments" : "",
           "groupId" : "b12b67ef-019d-1000-4940-f6707f039907",
+          "id" : "b12b67f7-019d-1000-7d82-edd5cf728b67",
+          "name" : "MRA  Id",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "b12b67ef-019d-1000-4940-f6707f039907",
+        "identifier" : "86fba0e8-bc02-35fe-8f5c-75031ce9f618",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "matched" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "b12b67ef-019d-1000-4940-f6707f039907",
+          "id" : "b12b67f0-019d-1000-bea5-0e9f1b7ae3d7",
+          "name" : "Extract User  Id",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 16
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "b12b67ef-019d-1000-4940-f6707f039907",
           "id" : "b12b67f3-019d-1000-de3c-8c835b304dd5",
           "name" : "Validate User",
           "type" : "PROCESSOR"
@@ -30822,66 +30852,6 @@
           "type" : "INPUT_PORT"
         },
         "zIndex" : 1
-      }, {
-        "backPressureDataSizeThreshold" : "1 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "comments" : "",
-          "groupId" : "b12b67ef-019d-1000-4940-f6707f039907",
-          "id" : "b12b67f7-019d-1000-7d82-edd5cf728b67",
-          "name" : "MRA  Id",
-          "type" : "OUTPUT_PORT"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "b12b67ef-019d-1000-4940-f6707f039907",
-        "identifier" : "b12b680b-019d-1000-abb7-ac05fccd3eac",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "success" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "b12b67ef-019d-1000-4940-f6707f039907",
-          "id" : "b12b67f5-019d-1000-c313-d091e8ebd222",
-          "name" : "Validate MRA Status",
-          "type" : "PROCESSOR"
-        },
-        "zIndex" : 17
-      }, {
-        "backPressureDataSizeThreshold" : "1 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "comments" : "",
-          "groupId" : "b12b67ef-019d-1000-4940-f6707f039907",
-          "id" : "b12b67f5-019d-1000-c313-d091e8ebd222",
-          "name" : "Validate MRA Status",
-          "type" : "PROCESSOR"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "b12b67ef-019d-1000-4940-f6707f039907",
-        "identifier" : "b12b680c-019d-1000-46ac-9701a251345b",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "matched" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "b12b67ef-019d-1000-4940-f6707f039907",
-          "id" : "b12b67f0-019d-1000-bea5-0e9f1b7ae3d7",
-          "name" : "Extract User  Id",
-          "type" : "PROCESSOR"
-        },
-        "zIndex" : 16
       } ],
       "controllerServices" : [ ],
       "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -31375,8 +31345,8 @@
           "MRAIsEnabled" : "$.value[0].enabled",
           "Max String Length" : "20 MB",
           "Return Type" : "scalar",
+          "MatterResponsibleAttorneysId" : "$.value[0].id",
           "Null Value Representation" : "empty string",
-          "MatterResponsibleAttorneys" : "$.value[0].id",
           "Path Not Found Behavior" : "ignore"
         },
         "propertyDescriptors" : {
@@ -31408,18 +31378,18 @@
             "name" : "Return Type",
             "sensitive" : false
           },
+          "MatterResponsibleAttorneysId" : {
+            "displayName" : "MatterResponsibleAttorneysId",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "MatterResponsibleAttorneysId",
+            "sensitive" : false
+          },
           "Null Value Representation" : {
             "displayName" : "Null Value Representation",
             "dynamic" : false,
             "identifiesControllerService" : false,
             "name" : "Null Value Representation",
-            "sensitive" : false
-          },
-          "MatterResponsibleAttorneys" : {
-            "displayName" : "MatterResponsibleAttorneys",
-            "dynamic" : true,
-            "identifiesControllerService" : false,
-            "name" : "MatterResponsibleAttorneys",
             "sensitive" : false
           },
           "Path Not Found Behavior" : {
@@ -31704,7 +31674,7 @@
           "Socket Idle Connections" : "5",
           "Request Body Enabled" : "true",
           "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
-          "HTTP URL" : "#{BaseURL}/v1/users?filter=emailAddress eq '${ResponsibleAttorney}'",
+          "HTTP URL" : "#{BaseURL}/v1/users?filter=emailAddress eq '${ResponsibleAttorney:urlEncode()}'",
           "Socket Idle Timeout" : "5 mins",
           "Response Redirects Enabled" : "True",
           "Socket Write Timeout" : "15 secs",
@@ -31990,79 +31960,6 @@
         "schedulingStrategy" : "TIMER_DRIVEN",
         "style" : { },
         "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
-        "yieldDuration" : "1 sec"
-      }, {
-        "autoTerminatedRelationships" : [ ],
-        "backoffMechanism" : "PENALIZE_FLOWFILE",
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "nifi-update-attribute-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.5.0"
-        },
-        "comments" : "",
-        "componentType" : "PROCESSOR",
-        "concurrentlySchedulableTaskCount" : 1,
-        "executionNode" : "ALL",
-        "groupIdentifier" : "b12b67ef-019d-1000-4940-f6707f039907",
-        "identifier" : "b12b67f5-019d-1000-c313-d091e8ebd222",
-        "maxBackoffPeriod" : "10 mins",
-        "name" : "Validate MRA Status",
-        "penaltyDuration" : "30 sec",
-        "position" : {
-          "x" : 640.0,
-          "y" : -312.0
-        },
-        "properties" : {
-          "Store State" : "Do not store state",
-          "canonical-value-lookup-cache-size" : "100",
-          "MatterResponsibleAttorneys" : "${MRAIsEnabled:equals(true):ifElse(${MatterResponsibleAttorneys},'')}"
-        },
-        "propertyDescriptors" : {
-          "Delete Attributes Expression" : {
-            "displayName" : "Delete Attributes Expression",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Delete Attributes Expression",
-            "sensitive" : false
-          },
-          "Store State" : {
-            "displayName" : "Store State",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Store State",
-            "sensitive" : false
-          },
-          "canonical-value-lookup-cache-size" : {
-            "displayName" : "Cache Value Lookup Cache Size",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "canonical-value-lookup-cache-size",
-            "sensitive" : false
-          },
-          "Stateful Variables Initial Value" : {
-            "displayName" : "Stateful Variables Initial Value",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Stateful Variables Initial Value",
-            "sensitive" : false
-          },
-          "MatterResponsibleAttorneys" : {
-            "displayName" : "MatterResponsibleAttorneys",
-            "dynamic" : true,
-            "identifiesControllerService" : false,
-            "name" : "MatterResponsibleAttorneys",
-            "sensitive" : false
-          }
-        },
-        "retriedRelationships" : [ ],
-        "retryCount" : 10,
-        "runDurationMillis" : 25,
-        "scheduledState" : "ENABLED",
-        "schedulingPeriod" : "0 sec",
-        "schedulingStrategy" : "TIMER_DRIVEN",
-        "style" : { },
-        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
         "yieldDuration" : "1 sec"
       } ],
       "remoteProcessGroups" : [ ],
@@ -38367,6 +38264,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "Corerelate_Data_Importer_Surepoint",
-    "timestamp" : 1776797883029
+    "timestamp" : 1776885601215
   }
 }
