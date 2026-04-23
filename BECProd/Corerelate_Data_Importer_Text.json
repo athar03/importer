@@ -700,7 +700,7 @@
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
         "bends" : [ {
-          "x" : -384.0,
+          "x" : -376.0,
           "y" : 168.0
         } ],
         "componentType" : "CONNECTION",
@@ -1246,8 +1246,8 @@
         "name" : "ReplaceText",
         "penaltyDuration" : "30 sec",
         "position" : {
-          "x" : -376.0,
-          "y" : 224.0
+          "x" : -368.0,
+          "y" : 216.0
         },
         "properties" : {
           "Regular Expression" : "\"",
@@ -27068,8 +27068,8 @@
       } ],
       "parameterContextName" : "Importer Basic Params",
       "position" : {
-        "x" : -1408.0,
-        "y" : 312.0
+        "x" : -1424.0,
+        "y" : 320.0
       },
       "processGroups" : [ {
         "comments" : "",
@@ -35554,7 +35554,7 @@
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
         "bends" : [ {
-          "x" : -248.0,
+          "x" : -232.0,
           "y" : -128.0
         } ],
         "componentType" : "CONNECTION",
@@ -36084,7 +36084,7 @@
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : 160.0,
-          "y" : -80.0
+          "y" : -72.0
         },
         "properties" : {
           "Cache Entry Identifier" : "#{TokenName}",
@@ -36316,8 +36316,8 @@
         "name" : "List Latest Client Matters File",
         "penaltyDuration" : "30 sec",
         "position" : {
-          "x" : -640.0,
-          "y" : -64.0
+          "x" : -616.0,
+          "y" : -72.0
         },
         "properties" : {
           "Minimum File Age" : "20 sec",
@@ -40931,6 +40931,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "Corerelate_Data_Importer_Text",
-    "timestamp" : 1776971904528
+    "timestamp" : 1776972421763
   }
 }
