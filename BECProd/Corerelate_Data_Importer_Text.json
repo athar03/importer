@@ -4118,7 +4118,7 @@
           },
           "properties" : {
             "Regular Expression" : "(?s)(^.*$)",
-            "Replacement Value" : "{\n\"id\":\"${MatterId}\",\n\"clientId\": \"${ClientId}\",\n\"billingNo\": \"${MatterBillingNo}\",\n\"matterStatusId\": \"${MatterStatusId}\",\n\"name\": \"${MatterName:escapeJson()}\",\n\"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n\"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n\"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n\"PracticeId\" : \"${PracticeId}\",\n\"responsibleAttorneyId\":${MatterResponsibleAttorneysId:isEmpty():ifElse('null',${MatterResponsibleAttorneysId:prepend('\"'):append('\"')})},\n\"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n\"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n\"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})}\n}",
+            "Replacement Value" : "{\n\"id\":\"${MatterId}\",\n\"clientId\": \"${ClientId}\",\n\"billingNo\": \"${MatterBillingNo}\",\n\"matterStatusId\": \"${MatterStatusId}\",\n\"name\": \"${MatterName:escapeJson()}\",\n\"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n\"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n\"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n\"PracticeId\" : \"${PracticeId}\",\n\"responsibleAttorneyId\":${MatterResponsibleAttorneysId:isEmpty():ifElse('null',${MatterResponsibleAttorneysId:prepend('\"'):append('\"')})},\n\"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n\"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n\"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})},\n\"defaultWorkgroupId\":${WorkgroupId:isEmpty():ifElse('null',${WorkgroupId:prepend('\"'):append('\"')})}\n}",
             "Evaluation Mode" : "Entire text",
             "Line-by-Line Evaluation Mode" : "All",
             "Character Set" : "UTF-8",
@@ -5125,8 +5125,8 @@
         "outputPorts" : [ ],
         "parameterContextName" : "Importer Basic Params",
         "position" : {
-          "x" : -672.0,
-          "y" : -96.0
+          "x" : -664.0,
+          "y" : -32.0
         },
         "processGroups" : [ {
           "comments" : "",
@@ -5678,7 +5678,7 @@
           },
           "properties" : {
             "Regular Expression" : "(?s)(^.*$)",
-            "Replacement Value" : "{\n  \"clientId\": \"${ClientId}\",\n  \"billingNo\": \"${MatterBillingNo}\",\n  \"matterStatusId\": \"${MatterStatusId}\",\n  \"name\": \"${MatterName:escapeJson()}\",\n  \"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n  \"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n  \"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n   \"PracticeId\" : \"${PracticeId}\",\n  \"responsibleAttorneyId\": ${MatterResponsibleAttorneys:isEmpty():ifElse('null',${MatterResponsibleAttorneys:prepend('\"'):append('\"')})},\n \"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n  \"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n  \"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})}\n}",
+            "Replacement Value" : "{\n  \"clientId\": \"${ClientId}\",\n  \"billingNo\": \"${MatterBillingNo}\",\n  \"matterStatusId\": \"${MatterStatusId}\",\n  \"name\": \"${MatterName:escapeJson()}\",\n  \"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n  \"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n  \"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n   \"PracticeId\" : \"${PracticeId}\",\n  \"responsibleAttorneyId\": ${MatterResponsibleAttorneys:isEmpty():ifElse('null',${MatterResponsibleAttorneys:prepend('\"'):append('\"')})},\n \"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n  \"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n  \"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})},\n  \"defaultWorkgroupId\":${WorkgroupId:isEmpty():ifElse('null',${WorkgroupId:prepend('\"'):append('\"')})}\n}",
             "Evaluation Mode" : "Entire text",
             "Line-by-Line Evaluation Mode" : "All",
             "Character Set" : "UTF-8",
@@ -40931,6 +40931,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "Corerelate_Data_Importer_Text",
-    "timestamp" : 1776972421763
+    "timestamp" : 1776975084838
   }
 }
