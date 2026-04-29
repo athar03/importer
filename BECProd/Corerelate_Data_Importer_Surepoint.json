@@ -1686,6 +1686,7 @@
           "WorkgroupName" : "$.WorkgroupName",
           "Null Value Representation" : "empty string",
           "Path Not Found Behavior" : "ignore",
+          "SubMatter" : "$.SubMatter",
           "ClientName" : "$.ClientName",
           "MatterType" : "$.MatterType",
           "ClientBillingNo" : "$.ClientBillingNo",
@@ -1785,6 +1786,13 @@
             "dynamic" : false,
             "identifiesControllerService" : false,
             "name" : "Path Not Found Behavior",
+            "sensitive" : false
+          },
+          "SubMatter" : {
+            "displayName" : "SubMatter",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "SubMatter",
             "sensitive" : false
           },
           "ClientName" : {
@@ -35018,7 +35026,7 @@
           },
           "properties" : {
             "Regular Expression" : "(?s)(^.*$)",
-            "Replacement Value" : "{\n\"clientId\": \"${ClientId}\",\n\"billingNo\": \"${MatterBillingNo}\",\n\"matterStatusId\": \"${MatterStatusId}\",\n\"name\": \"${MatterName:escapeJson()}\",\n\"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n\"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n\"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n\"PracticeId\" : \"${PracticeId}\",\n\"responsibleAttorneyId\": ${MatterResponsibleAttorneys:isEmpty():ifElse('null',${MatterResponsibleAttorneys:prepend('\"'):append('\"')})},\n\"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n\"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n\"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})},\n\"defaultWorkgroupId\":${WorkgroupId:isEmpty():ifElse('null',${WorkgroupId:prepend('\"'):append('\"')})}\n}",
+            "Replacement Value" : "{\n\"name\": \"${MatterName:escapeJson()}\",\n\"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n\"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n\"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n\"PracticeId\" : \"${PracticeId}\",\n\"responsibleAttorneyId\": ${MatterResponsibleAttorneys:isEmpty():ifElse('null',${MatterResponsibleAttorneys:prepend('\"'):append('\"')})},\n\"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n\"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n\"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})},\n\"defaultWorkgroupId\":${WorkgroupId:isEmpty():ifElse('null',${WorkgroupId:prepend('\"'):append('\"')})},\n\"subMatter\":${SubMatter:isEmpty():ifElse('null',${SubMatter:prepend('\"'):append('\"')})}\n}",
             "Evaluation Mode" : "Entire text",
             "Line-by-Line Evaluation Mode" : "All",
             "Character Set" : "UTF-8",
@@ -36886,7 +36894,7 @@
             "Socket Idle Connections" : "5",
             "Request Body Enabled" : "true",
             "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
-            "HTTP URL" : "#{BaseURL}/v1/matters?filter=billingNo eq '${MatterBillingNo}' and clientId eq ${ClientId:urlEncode()} ",
+            "HTTP URL" : "#{BaseURL}/v1/matters?filter=billingNo eq '${MatterBillingNo}' and clientId eq ${ClientId:urlEncode()} ${subMatter:trim():isEmpty():not():ifElse(\"and subMatter eq '${subMatter}'\",\"\")}",
             "Socket Idle Timeout" : "5 mins",
             "Response Redirects Enabled" : "True",
             "Socket Write Timeout" : "15 secs",
@@ -38664,7 +38672,7 @@
           },
           "properties" : {
             "Regular Expression" : "(?s)(^.*$)",
-            "Replacement Value" : "{\n\"id\":\"${MatterId}\",\n\"clientId\": \"${ClientId}\",\n\"billingNo\": \"${MatterBillingNo}\",\n\"matterStatusId\": \"${MatterStatusId}\",\n\"name\": \"${MatterName:escapeJson()}\",\n\"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n\"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n\"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n\"PracticeId\" : \"${PracticeId}\",\n\"responsibleAttorneyId\":${MatterResponsibleAttorneysId:isEmpty():ifElse('null',${MatterResponsibleAttorneysId:prepend('\"'):append('\"')})},\n\"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n\"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n\"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})},\n\"defaultWorkgroupId\":${WorkgroupId:isEmpty():ifElse('null',${WorkgroupId:prepend('\"'):append('\"')})}\n}",
+            "Replacement Value" : "{\n\"id\":\"${MatterId}\",\n\"clientId\": \"${ClientId}\",\n\"billingNo\": \"${MatterBillingNo}\",\n\"matterStatusId\": \"${MatterStatusId}\",\n\"name\": \"${MatterName:escapeJson()}\",\n\"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n\"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n\"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n\"PracticeId\" : \"${PracticeId}\",\n\"responsibleAttorneyId\":${MatterResponsibleAttorneysId:isEmpty():ifElse('null',${MatterResponsibleAttorneysId:prepend('\"'):append('\"')})},\n\"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n\"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n\"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})},\n\"defaultWorkgroupId\":${WorkgroupId:isEmpty():ifElse('null',${WorkgroupId:prepend('\"'):append('\"')})},\n\"subMatter\":${SubMatter:isEmpty():ifElse('null',${SubMatter:prepend('\"'):append('\"')})}\n}",
             "Evaluation Mode" : "Entire text",
             "Line-by-Line Evaluation Mode" : "All",
             "Character Set" : "UTF-8",
@@ -39137,6 +39145,66 @@
         "destination" : {
           "comments" : "",
           "groupId" : "bbd455a3-019d-1000-18ee-005541b618e1",
+          "id" : "da673703-019d-1000-420f-783f396f2a78",
+          "name" : "Validate MRA Status",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "bbd455a3-019d-1000-18ee-005541b618e1",
+        "identifier" : "5072bc0e-d0e3-36b5-8894-aec1a7b9787a",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "matched" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "bbd455a3-019d-1000-18ee-005541b618e1",
+          "id" : "bbd455a4-019d-1000-8c26-dd6aaffae53d",
+          "name" : "Extract User  Id",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 16
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "bbd455a3-019d-1000-18ee-005541b618e1",
+          "id" : "bbd455aa-019d-1000-3b97-7d88a5b63065",
+          "name" : "MRA  Id",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "bbd455a3-019d-1000-18ee-005541b618e1",
+        "identifier" : "909e9134-58b0-3e57-b8ce-1ecb8ebfa249",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "bbd455a3-019d-1000-18ee-005541b618e1",
+          "id" : "da673703-019d-1000-420f-783f396f2a78",
+          "name" : "Validate MRA Status",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 17
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "bbd455a3-019d-1000-18ee-005541b618e1",
           "id" : "bbd455a7-019d-1000-ade7-dba332b3ed06",
           "name" : "Validate User",
           "type" : "PROCESSOR"
@@ -39379,36 +39447,6 @@
           "type" : "INPUT_PORT"
         },
         "zIndex" : 1
-      }, {
-        "backPressureDataSizeThreshold" : "1 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "comments" : "",
-          "groupId" : "bbd455a3-019d-1000-18ee-005541b618e1",
-          "id" : "bbd455aa-019d-1000-3b97-7d88a5b63065",
-          "name" : "MRA  Id",
-          "type" : "OUTPUT_PORT"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "bbd455a3-019d-1000-18ee-005541b618e1",
-        "identifier" : "bbd455be-019d-1000-49ee-fed709e80b4d",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "matched" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "bbd455a3-019d-1000-18ee-005541b618e1",
-          "id" : "bbd455a4-019d-1000-8c26-dd6aaffae53d",
-          "name" : "Extract User  Id",
-          "type" : "PROCESSOR"
-        },
-        "zIndex" : 16
       } ],
       "controllerServices" : [ ],
       "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -39450,7 +39488,7 @@
         "portFunction" : "STANDARD",
         "position" : {
           "x" : 696.0,
-          "y" : -424.0
+          "y" : -432.0
         },
         "scheduledState" : "ENABLED",
         "type" : "OUTPUT_PORT"
@@ -40518,6 +40556,79 @@
         "style" : { },
         "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
         "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "bbd455a3-019d-1000-18ee-005541b618e1",
+        "identifier" : "da673703-019d-1000-420f-783f396f2a78",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "Validate MRA Status",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 632.0,
+          "y" : -312.0
+        },
+        "properties" : {
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100",
+          "MatterResponsibleAttorneys" : "${MRAIsEnabled:equals(true):ifElse(${MatterResponsibleAttorneys},'')}"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          },
+          "MatterResponsibleAttorneys" : {
+            "displayName" : "MatterResponsibleAttorneys",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "MatterResponsibleAttorneys",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
       } ],
       "remoteProcessGroups" : [ ],
       "scheduledState" : "ENABLED",
@@ -40961,6 +41072,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "Corerelate_Data_Importer_Surepoint",
-    "timestamp" : 1776975046693
+    "timestamp" : 1777487610592
   }
 }
