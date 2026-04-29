@@ -1001,6 +1001,7 @@
           "WorkgroupName" : "$.WorkgroupName",
           "Null Value Representation" : "empty string",
           "Path Not Found Behavior" : "ignore",
+          "SubMatter" : "$.SubMatter",
           "ClientName" : "$.ClientName",
           "MatterType" : "$.MatterType",
           "ClientBillingNo" : "$.ClientBillingNo",
@@ -1100,6 +1101,13 @@
             "dynamic" : false,
             "identifiesControllerService" : false,
             "name" : "Path Not Found Behavior",
+            "sensitive" : false
+          },
+          "SubMatter" : {
+            "displayName" : "SubMatter",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "SubMatter",
             "sensitive" : false
           },
           "ClientName" : {
@@ -1343,8 +1351,8 @@
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
         "bends" : [ {
-          "x" : -784.0,
-          "y" : -432.0
+          "x" : -696.0,
+          "y" : -400.0
         } ],
         "componentType" : "CONNECTION",
         "destination" : {
@@ -1376,7 +1384,7 @@
         "backPressureObjectThreshold" : 10000,
         "bends" : [ {
           "x" : -208.0,
-          "y" : -440.0
+          "y" : -408.0
         } ],
         "componentType" : "CONNECTION",
         "destination" : {
@@ -1457,8 +1465,8 @@
         "name" : "Matter",
         "portFunction" : "STANDARD",
         "position" : {
-          "x" : -1008.0,
-          "y" : -336.0
+          "x" : -960.0,
+          "y" : -360.0
         },
         "scheduledState" : "ENABLED",
         "type" : "INPUT_PORT"
@@ -3075,7 +3083,7 @@
             "Socket Idle Connections" : "5",
             "Request Body Enabled" : "true",
             "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
-            "HTTP URL" : "#{BaseURL}/v1/matters?filter=billingNo eq '${MatterBillingNo}' and clientId eq ${ClientId:urlEncode()} ",
+            "HTTP URL" : "#{BaseURL}/v1/matters?filter=billingNo eq '${MatterBillingNo}' and clientId eq ${ClientId:urlEncode()} ${subMatter:trim():isEmpty():not():ifElse(\"and subMatter eq '${subMatter}'\",\"\")}",
             "Socket Idle Timeout" : "5 mins",
             "Response Redirects Enabled" : "True",
             "Socket Write Timeout" : "15 secs",
@@ -3495,8 +3503,8 @@
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
           "bends" : [ {
-            "x" : 632.0,
-            "y" : 336.0
+            "x" : 640.0,
+            "y" : 328.0
           } ],
           "componentType" : "CONNECTION",
           "destination" : {
@@ -3664,8 +3672,8 @@
           "name" : "Matter",
           "portFunction" : "STANDARD",
           "position" : {
-            "x" : -648.0,
-            "y" : 144.0
+            "x" : -464.0,
+            "y" : 120.0
           },
           "scheduledState" : "ENABLED",
           "type" : "INPUT_PORT"
@@ -3676,8 +3684,8 @@
         "outputPorts" : [ ],
         "parameterContextName" : "Importer Basic Params",
         "position" : {
-          "x" : -160.0,
-          "y" : -352.0
+          "x" : -184.0,
+          "y" : -344.0
         },
         "processGroups" : [ {
           "comments" : "",
@@ -3884,8 +3892,8 @@
           } ],
           "parameterContextName" : "Importer Basic Params",
           "position" : {
-            "x" : -144.0,
-            "y" : 296.0
+            "x" : -136.0,
+            "y" : 288.0
           },
           "processGroups" : [ ],
           "processors" : [ {
@@ -4113,12 +4121,12 @@
           "name" : "Prepare Matter Request Payload",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : -120.0,
-            "y" : 64.0
+            "x" : -136.0,
+            "y" : 56.0
           },
           "properties" : {
             "Regular Expression" : "(?s)(^.*$)",
-            "Replacement Value" : "{\n\"id\":\"${MatterId}\",\n\"clientId\": \"${ClientId}\",\n\"billingNo\": \"${MatterBillingNo}\",\n\"matterStatusId\": \"${MatterStatusId}\",\n\"name\": \"${MatterName:escapeJson()}\",\n\"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n\"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n\"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n\"PracticeId\" : \"${PracticeId}\",\n\"responsibleAttorneyId\":${MatterResponsibleAttorneysId:isEmpty():ifElse('null',${MatterResponsibleAttorneysId:prepend('\"'):append('\"')})},\n\"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n\"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n\"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})},\n\"defaultWorkgroupId\":${WorkgroupId:isEmpty():ifElse('null',${WorkgroupId:prepend('\"'):append('\"')})}\n}",
+            "Replacement Value" : "{\n\"id\":\"${MatterId}\",\n\"clientId\": \"${ClientId}\",\n\"billingNo\": \"${MatterBillingNo}\",\n\"matterStatusId\": \"${MatterStatusId}\",\n\"name\": \"${MatterName:escapeJson()}\",\n\"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n\"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n\"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n\"PracticeId\" : \"${PracticeId}\",\n\"responsibleAttorneyId\":${MatterResponsibleAttorneysId:isEmpty():ifElse('null',${MatterResponsibleAttorneysId:prepend('\"'):append('\"')})},\n\"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n\"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n\"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})},\n\"defaultWorkgroupId\":${WorkgroupId:isEmpty():ifElse('null',${WorkgroupId:prepend('\"'):append('\"')})},\n\"subMatter\":${SubMatter:isEmpty():ifElse('null',${SubMatter:prepend('\"'):append('\"')})}\n}",
             "Evaluation Mode" : "Entire text",
             "Line-by-Line Evaluation Mode" : "All",
             "Character Set" : "UTF-8",
@@ -5125,8 +5133,8 @@
         "outputPorts" : [ ],
         "parameterContextName" : "Importer Basic Params",
         "position" : {
-          "x" : -664.0,
-          "y" : -32.0
+          "x" : -648.0,
+          "y" : -48.0
         },
         "processGroups" : [ {
           "comments" : "",
@@ -5678,7 +5686,7 @@
           },
           "properties" : {
             "Regular Expression" : "(?s)(^.*$)",
-            "Replacement Value" : "{\n  \"clientId\": \"${ClientId}\",\n  \"billingNo\": \"${MatterBillingNo}\",\n  \"matterStatusId\": \"${MatterStatusId}\",\n  \"name\": \"${MatterName:escapeJson()}\",\n  \"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n  \"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n  \"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n   \"PracticeId\" : \"${PracticeId}\",\n  \"responsibleAttorneyId\": ${MatterResponsibleAttorneys:isEmpty():ifElse('null',${MatterResponsibleAttorneys:prepend('\"'):append('\"')})},\n \"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n  \"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n  \"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})},\n  \"defaultWorkgroupId\":${WorkgroupId:isEmpty():ifElse('null',${WorkgroupId:prepend('\"'):append('\"')})}\n}",
+            "Replacement Value" : "{\n\"clientId\": \"${ClientId}\",\n\"billingNo\": \"${MatterBillingNo}\",\n\"matterStatusId\": \"${MatterStatusId}\",\n\"name\": \"${MatterName:escapeJson()}\",\n\"shortTitle\": ${ShortTitle:isEmpty():ifElse(${ClientBillingNo:append('.'):append(${MatterBillingNo}):prepend('\"'):append('\"')},${ShortTitle:escapeJson():prepend('\"'):append('\"')})},\n\"openedOn\": ${OpenedOn:isEmpty():ifElse('null',${OpenedOn:prepend('\"'):append('\"')})},\n\"closedOn\": ${ClosedOn:isEmpty():ifElse('null',${ClosedOn:prepend('\"'):append('\"')})},\n\"PracticeId\" : \"${PracticeId}\",\n\"responsibleAttorneyId\": ${MatterResponsibleAttorneys:isEmpty():ifElse('null',${MatterResponsibleAttorneys:prepend('\"'):append('\"')})},\n\"matterTypeId\":${MatterTypeId:isEmpty():ifElse('null',${MatterTypeId:prepend('\"'):append('\"')})},\n\"departmentId\":${DepartmentId:isEmpty():ifElse('null',${DepartmentId:prepend('\"'):append('\"')})}, \n\"siteId\":${SiteId:isEmpty():ifElse('null',${SiteId:prepend('\"'):append('\"')})},\n\"defaultWorkgroupId\":${WorkgroupId:isEmpty():ifElse('null',${WorkgroupId:prepend('\"'):append('\"')})},\n\"subMatter\":${SubMatter:isEmpty():ifElse('null',${SubMatter:prepend('\"'):append('\"')})}\n}",
             "Evaluation Mode" : "Entire text",
             "Line-by-Line Evaluation Mode" : "All",
             "Character Set" : "UTF-8",
@@ -8077,13 +8085,13 @@
         "destination" : {
           "comments" : "",
           "groupId" : "75de7e82-019c-1000-4b6c-4eea0d1ef2aa",
-          "id" : "75de7e89-019c-1000-f663-d2b6d1ca5b97",
-          "name" : "MRA  Id",
-          "type" : "OUTPUT_PORT"
+          "id" : "da67e686-019d-1000-291b-af7292777de5",
+          "name" : "Validate MRA Status",
+          "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "75de7e82-019c-1000-4b6c-4eea0d1ef2aa",
-        "identifier" : "266410be-978d-398d-9ac6-ad097691d628",
+        "identifier" : "6e82ef53-268e-35d5-bdb6-596adc686766",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
         "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -8349,6 +8357,36 @@
           "type" : "PROCESSOR"
         },
         "zIndex" : 13
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "75de7e82-019c-1000-4b6c-4eea0d1ef2aa",
+          "id" : "75de7e89-019c-1000-f663-d2b6d1ca5b97",
+          "name" : "MRA  Id",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "75de7e82-019c-1000-4b6c-4eea0d1ef2aa",
+        "identifier" : "83d33ef0-e926-3dba-b120-4723666cf312",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "75de7e82-019c-1000-4b6c-4eea0d1ef2aa",
+          "id" : "da67e686-019d-1000-291b-af7292777de5",
+          "name" : "Validate MRA Status",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 17
       } ],
       "controllerServices" : [ ],
       "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -9457,6 +9495,79 @@
         "schedulingStrategy" : "TIMER_DRIVEN",
         "style" : { },
         "type" : "org.apache.nifi.processors.standard.RetryFlowFile",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.5.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "75de7e82-019c-1000-4b6c-4eea0d1ef2aa",
+        "identifier" : "da67e686-019d-1000-291b-af7292777de5",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "Validate MRA Status",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 640.0,
+          "y" : -320.0
+        },
+        "properties" : {
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100",
+          "MatterResponsibleAttorneys" : "${MRAIsEnabled:equals(true):ifElse(${MatterResponsibleAttorneys},'')}"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          },
+          "MatterResponsibleAttorneys" : {
+            "displayName" : "MatterResponsibleAttorneys",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "MatterResponsibleAttorneys",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
         "yieldDuration" : "1 sec"
       } ],
       "remoteProcessGroups" : [ ],
@@ -40931,6 +41042,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "Corerelate_Data_Importer_Text",
-    "timestamp" : 1776975084838
+    "timestamp" : 1777487629563
   }
 }
